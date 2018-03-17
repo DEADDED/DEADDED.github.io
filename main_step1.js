@@ -255,7 +255,8 @@ function normalize(v,vmin,vmax,tmin, tmax){
 }
 
 function init(event){
-  document.addEventListener('mousemove', handleMouseMove, false);
+  //document.addEventListener('mousemove', handleMouseMove, false);
+  document.addEventListener('deviceorientation', handleOrientation,false);
   createScene();
   createLights();
   createPlane();
@@ -263,7 +264,14 @@ function init(event){
   createSky();
   loop();
 }
-
+function handleOrientation(event){
+	
+	var tx = parseInt(event.beta);  // In degree in the range [-180,180]
+  var ty = parseInt(event.gamma); // In degree in the range [-90,90]
+	
+	console.log(tx);
+	console.log(ty);
+}
 // HANDLE MOUSE EVENTS
 
 var mousePos = { x: 0, y: 0 };
