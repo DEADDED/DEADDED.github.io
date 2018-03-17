@@ -271,7 +271,7 @@ function handleOrientation(event){
 	var tx = event.beta;
 	alert(tx);
 	console.log(tx);
-	mousePos1={x:tx, y:7};
+	mousePos1={x:tx, y:15};
 }
 // HANDLE MOUSE EVENTS
 
