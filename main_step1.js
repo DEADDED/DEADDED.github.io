@@ -256,7 +256,26 @@ function normalize(v,vmin,vmax,tmin, tmax){
 
 function init(event){
   //document.addEventListener('mousemove', handleMouseMove, false);
-  window.addEventListener('deviceorientation', handleOrientation);
+  if (window.DeviceOrientationEvent) {
+    window.addEventListener("deviceorientation", function(event) {
+        // alpha: rotation around z-axis
+        var rotateDegrees = event.alpha;
+        // gamma: left to right
+        var leftToRight = event.gamma;
+        // beta: front back motion
+        var frontToBack = event.beta;
+	
+	  alert(leftToRight);
+        //handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
+    }, true);
+}
+	else{
+		alert("Не подд");
+	}
+
+/*var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
+    // do something amazing
+};*/
   createScene();
   createLights();
   createPlane();
