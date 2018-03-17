@@ -269,8 +269,8 @@ function handleOrientation(event){
 	var tx = parseInt(event.beta);  // In degree in the range [-180,180]
   var ty = parseInt(event.gamma); // In degree in the range [-90,90]
 	
-	console.log(tx);
-	console.log(ty);
+	alert(tx);
+	alert(ty);
 }
 // HANDLE MOUSE EVENTS
 
