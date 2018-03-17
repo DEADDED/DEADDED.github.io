@@ -256,7 +256,7 @@ function normalize(v,vmin,vmax,tmin, tmax){
 
 function init(event){
   //document.addEventListener('mousemove', handleMouseMove, false);
-  document.addEventListener('deviceorientation', handleOrientation,false);
+  window.addEventListener('deviceorientation', handleOrientation);
   createScene();
   createLights();
   createPlane();
