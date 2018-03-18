@@ -268,7 +268,7 @@ function init(event){
 var mousePos1 = { x: 0, y: 0 };
 
 function handleOrientation(event){
-	var tx = event.beta;
+	var tx = event.beta * 5;
 	//alert(tx);
 	console.log(tx);
 	mousePos1={x:tx, y:15};
