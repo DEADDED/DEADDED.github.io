@@ -239,7 +239,7 @@ function loop(){
 
 function updatePlane(){
   var targetY = 50; //mousePos1.y;//normalize(mousePos1.y,-.75,.75,25, 175);
-  var targetX = mousePos1.x*3; //normalize(mousePos1.x,-.75,.75,-100, 100);
+  var targetX = mousePos1.x/3; //normalize(mousePos1.x,-.75,.75,-100, 100);
   airplane.mesh.position.y = targetY;
   airplane.mesh.position.x = targetX;
   airplane.propeller.rotation.x += 0.3;
