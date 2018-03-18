@@ -238,8 +238,8 @@ function loop(){
 }
 
 function updatePlane(){
-  var targetY = 70; //mousePos1.y;//normalize(mousePos1.y,-.75,.75,25, 175);
-  var targetX = lerp(airplane.mesh.position.x,mousePos1.x,0.1); //normalize(mousePos1.x,-.75,.75,-100, 100);
+  var targetY = 50; //mousePos1.y;//normalize(mousePos1.y,-.75,.75,25, 175);
+  var targetX = lerp(airplane.mesh.position.x,mousePos1.x,0.5); //normalize(mousePos1.x,-.75,.75,-100, 100);
   airplane.mesh.position.y = targetY;
   airplane.mesh.position.x = targetX;
   airplane.propeller.rotation.x += 0.3;
