@@ -238,13 +238,15 @@ function loop(){
 }
 
 function updatePlane(){
-  var targetY = 50; //mousePos1.y;//normalize(mousePos1.y,-.75,.75,25, 175);
-  var targetX = mousePos1.x/3; //normalize(mousePos1.x,-.75,.75,-100, 100);
+  var targetY = 70; //mousePos1.y;//normalize(mousePos1.y,-.75,.75,25, 175);
+  var targetX = lerp(airplane.mesh.position.x,mousePos1.x,0.1); //normalize(mousePos1.x,-.75,.75,-100, 100);
   airplane.mesh.position.y = targetY;
   airplane.mesh.position.x = targetX;
   airplane.propeller.rotation.x += 0.3;
 }
-
+function lerp (start, end, amt){
+  return (1-amt)*start+amt*end
+}
 function normalize(v,vmin,vmax,tmin, tmax){
   var nv = Math.max(Math.min(v,vmax), vmin);
   var dv = vmax-vmin;
@@ -268,7 +270,7 @@ function init(event){
 var mousePos1 = { x: 0, y: 0 };
 
 function handleOrientation(event){
-	var tx = event.alpha;
+	var tx = event.alpha/3.6;
 	//alert(tx);
 	console.log(tx);
 	mousePos1={x:tx, y:15};
