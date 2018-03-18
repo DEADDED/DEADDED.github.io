@@ -239,7 +239,7 @@ function loop(){
 
 function updatePlane(){
   var targetY = 5; //mousePos1.y;//normalize(mousePos1.y,-.75,.75,25, 175);
-  var targetX = mousePos1.x; //normalize(mousePos1.x,-.75,.75,-100, 100);
+  var targetX = normalize(mousePos1.x,-.75,.75,-100, 100);
   airplane.mesh.position.y = targetY;
   airplane.mesh.position.x = targetX;
   airplane.propeller.rotation.x += 0.3;
@@ -268,7 +268,7 @@ function init(event){
 var mousePos1 = { x: 0, y: 0 };
 
 function handleOrientation(event){
-	var tx = event.beta;
+	var tx = event.alpha;
 	//alert(tx);
 	console.log(tx);
 	mousePos1={x:tx, y:15};
