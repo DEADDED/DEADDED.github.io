@@ -245,7 +245,7 @@ function updatePlane(){
   airplane.propeller.rotation.x += 0.3;
 }
 function lerp (start, end, amt){
-  return (1-amt)*start+amt*end
+  return (1-amt)*start+amt*end;
 }
 function normalize(v,vmin,vmax,tmin, tmax){
   var nv = Math.max(Math.min(v,vmax), vmin);
@@ -271,7 +271,7 @@ var mousePos1 = { x: 0, y: 0 };
 
 function handleOrientation(event){
 	var tx = event.alpha/3.6;
-	slert(event.alpha);
+	alert(event.alpha);
 	//alert(tx);
 	console.log(tx);
 	mousePos1={x:tx, y:15};
