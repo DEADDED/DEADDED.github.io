@@ -1,6 +1,23 @@
 //COLORS
 
-screen.orientation.lock('landscape');
+var start = function() {
+    screen.orientation.lock('landscape-primary').then(
+      startInternal,
+      function() {
+        alert('To start, rotate your screen to landscape.');
+
+        var orientationChangeHandler = function() {
+          if (!screen.orientation.type.startsWith('landscape')) {
+            return;
+          }
+          screen.orientation.removeEventListener('change', orientationChangeHandler);
+          startInternal();
+        }
+
+        screen.orientation.addEventListener('change', orientationChangeHandler);
+      });
+  }
+  window.onload = start;
 
 var Colors = {
     red:0xf25346,
@@ -241,7 +258,7 @@ function loop(){
 }
 
 function updatePlane(){
-  var targetY = 60; //mousePos1.y;//normalize(mousePos1.y,-.75,.75,25, 175);
+  var targetY = 30; //mousePos1.y;//normalize(mousePos1.y,-.75,.75,25, 175);
   var targetX = mousePos1.x;// normalize(mousePos1.x,-.75,.75,-100, 100);
   /*if(targetX > 100)
 	  targetX = 100;
