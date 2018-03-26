@@ -1,4 +1,7 @@
 //COLORS
+
+screen.orientation.lock('landscape');
+
 var Colors = {
     red:0xf25346,
     white:0xd8d0d1,
