@@ -270,7 +270,8 @@ function init(event){
 var mousePos1 = { x: 0, y: 0 };
 
 function handleOrientation(event){
-	var tx += event.accelerationIncludingGravity.y;
+	var tx = mousePos1.x;
+	tx += event.accelerationIncludingGravity.y;
 	//alert(event.alpha);
 	//alert(tx);
 	console.log(tx);
