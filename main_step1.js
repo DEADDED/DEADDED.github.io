@@ -238,8 +238,8 @@ function loop(){
 }
 
 function updatePlane(){
-  var targetY = 30; //mousePos1.y;//normalize(mousePos1.y,-.75,.75,25, 175);
-  var targetX = lerp(airplane.mesh.position.x,mousePos1.x,0.9); //normalize(mousePos1.x,-.75,.75,-100, 100);
+  var targetY = 60; //mousePos1.y;//normalize(mousePos1.y,-.75,.75,25, 175);
+  var targetX = mousePos1.x;// normalize(mousePos1.x,-.75,.75,-100, 100);
   airplane.mesh.position.y = targetY;
   airplane.mesh.position.x = targetX;
   airplane.propeller.rotation.x += 0.3;
@@ -258,7 +258,7 @@ function normalize(v,vmin,vmax,tmin, tmax){
 
 function init(event){
   document.addEventListener('mousemove', handleMouseMove, false);
-  window.addEventListener('deviceorientation', handleOrientation);
+  window.addEventListener('devicemotion', handleOrientation);
   createScene();
   createLights();
   createPlane();
@@ -270,11 +270,11 @@ function init(event){
 var mousePos1 = { x: 0, y: 0 };
 
 function handleOrientation(event){
-	var tx = event.alpha/3.6;
-	alert(event.alpha);
+	var tx = event.accelerationIncludingGravity.y;
+	//alert(event.alpha);
 	//alert(tx);
 	console.log(tx);
-	mousePos1={x:tx, y:15};
+	mousePos1={x:tx, y:45};
 }
 // HANDLE MOUSE EVENTS
 
