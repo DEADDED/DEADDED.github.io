@@ -19,6 +19,26 @@
 		<![endif]-->
 	</head>
 	<body>
+		<script>
+			var start = function() {
+    screen.orientation.lock('landscape-primary').then(
+      startInternal,
+      function() {
+        alert('To start, rotate your screen to landscape.');
+
+        var orientationChangeHandler = function() {
+          if (!screen.orientation.type.startsWith('landscape')) {
+            return;
+          }
+          screen.orientation.removeEventListener('change', orientationChangeHandler);
+          startInternal();
+        }
+
+        screen.orientation.addEventListener('change', orientationChangeHandler);
+      });
+  }
+  window.onload = start;
+		</script>
 		<div class="world" id="world"></div>
 		<nav class="meta">
 			<a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Development/Interactive3DMallMap/" title="Previous Demo"><span>Previous Demo</span></a>
