@@ -19,13 +19,7 @@
 		<![endif]-->
 	</head>
 	<body>
-		<script>
-			screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
-			
-			screen.lockOrientationUniversal("landscape-primary");
-			
-			screen.orientation.lock("landscape-primary");
-		</script>
+		
 		<div class="world" id="world"></div>
 		<nav class="meta">
 			<a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Development/Interactive3DMallMap/" title="Previous Demo"><span>Previous Demo</span></a>
@@ -34,5 +28,12 @@
 			<a class="demo-link" href="part2.html">Part 2</a>
 			<a class="demo-link" href="index.html">Game</a>
 		</nav>
+		<script>
+			screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+			
+			screen.lockOrientationUniversal("landscape-primary");
+			
+			screen.orientation.lock("landscape-primary");
+		</script>
 	</body>
 </html>
