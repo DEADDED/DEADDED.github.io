@@ -96,7 +96,7 @@ var AirPlane = function(){
   // Create Tailplane
 
   var geomTailPlane = new THREE.BoxGeometry(15,20,5,1,1,1);
-  var matTailPlane = new THREE.MeshPhongMaterial({color:0x550000, shading:THREE.FlatShading});
+  var matTailPlane = new THREE.MeshPhongMaterial({color:0x551100, shading:THREE.FlatShading});
   var tailPlane = new THREE.Mesh(geomTailPlane, matTailPlane);
   tailPlane.position.set(-35,25,0);
   tailPlane.castShadow = true;
