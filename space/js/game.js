@@ -85,7 +85,7 @@ function init(event){
   
 
   var loader = new THREE.JSONLoader();
-  loader.load( "https://github.com/DEADDED/DEADDED.github.io/blob/master/space/js/flamingo.js", function( geometry ) {
+  loader.load( "https://deadded.github.io/space/js/flamingo.js", function( geometry ) {
       var material = new THREE.MeshPhongMaterial( {
           color: 0xffffff,
           morphTargets: true,
