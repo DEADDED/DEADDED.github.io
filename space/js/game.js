@@ -152,7 +152,7 @@ function updatePlane(){
   else if(targetX < -100)
 	  targetX = -100;*/
   airplane.mesh.position.y += targetY;
-  airplane.mesh.position.x = targetX;
+  airplane.mesh.position.x += targetX;
 	if(airplane.mesh.position.y > 100)
 		airplane.mesh.position.y = 100;
 	if(airplane.mesh.position.y < -100)
