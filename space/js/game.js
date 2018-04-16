@@ -145,7 +145,7 @@ function createPlane(){
 }
 
 function updatePlane(){
-  var targetY = MousePos1.x; //mousePos1.y;//normalize(mousePos1.y,-.75,.75,25, 175);
+  var targetY = mousePos1.x; //mousePos1.y;//normalize(mousePos1.y,-.75,.75,25, 175);
   var targetX = 30;// normalize(mousePos1.x,-.75,.75,-100, 100);
   /*if(targetX > 100)
 	  targetX = 100;
