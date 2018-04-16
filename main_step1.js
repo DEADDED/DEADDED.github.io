@@ -241,18 +241,18 @@ function loop(){
 }
 
 function updatePlane(){
-  var targetY = 30; //mousePos1.y;//normalize(mousePos1.y,-.75,.75,25, 175);
-  var targetX = mousePos1.x;// normalize(mousePos1.x,-.75,.75,-100, 100);
+  var targetY = mousePos1.x; //mousePos1.y;//normalize(mousePos1.y,-.75,.75,25, 175);
+  var targetX = -30;// normalize(mousePos1.x,-.75,.75,-100, 100);
   /*if(targetX > 100)
 	  targetX = 100;
   else if(targetX < -100)
 	  targetX = -100;*/
-  airplane.mesh.position.y = targetY;
-  airplane.mesh.position.x += targetX;
-	if(airplane.mesh.position.x > 100)
-		airplane.mesh.position.x = 100;
-	if(airplane.mesh.position.x < -100)
-		airplane.mesh.position.x = -100;
+  airplane.mesh.position.y += targetY;
+  airplane.mesh.position.x = targetX;
+	if(airplane.mesh.position.y > 100)
+		airplane.mesh.position.y = 100;
+	if(airplane.mesh.position.y < -100)
+		airplane.mesh.position.y = -100;
 	
   airplane.propeller.rotation.x += 0.3;
 }
