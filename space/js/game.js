@@ -140,7 +140,7 @@ var airplane;
 function createPlane(){
   airplane = new AirPlane();
   airplane.mesh.scale.set(.25,.25,.25);
-  airplane.mesh.position.y = 100;
+  airplane.mesh.position.y = 50;
   scene.add(airplane.mesh);
 }
 
