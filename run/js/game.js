@@ -5,7 +5,7 @@ var scene,
 
 var HEIGHT, WIDTH;
 
-
+var clock = new THREE.Clock();
 function createScene() {
 
   HEIGHT = window.innerHeight;
