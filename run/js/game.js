@@ -111,9 +111,7 @@ function init(event){
 					mesh.castShadow = true;
 					mesh.receiveShadow = true;
 					scene.add( mesh );
-					var mixer = new THREE.AnimationMixer( mesh );
-					mixer.clipAction( geometry.animations[ 0 ] ).setDuration( 1 ).play();
-					mixers.push( mixer );
+					
 				} );
 
   
