@@ -5,7 +5,7 @@ var scene,
 
 var HEIGHT, WIDTH;
 
-var clock = new THREE.Clock();
+
 function createScene() {
 
   HEIGHT = window.innerHeight;
@@ -86,10 +86,7 @@ function loop(){
 
   //camera.rotation.z += 0.001;
 
-  var delta = clock.getDelta();
-				for ( var i = 0; i < mixers.length; i ++ ) {
-					mixers[ i ].update( delta );
-				}
+ 
   renderer.render(scene, camera);
   requestAnimationFrame(loop);
 }
