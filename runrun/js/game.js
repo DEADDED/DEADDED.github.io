@@ -124,7 +124,7 @@ function init(event){
           mesh.position.x = 0;
           mesh.position.y = 150;
           mesh.scale.set(1.5,1.5,1.5);
-	  mesh.rotateY(Math.PI / 2);
+	  mesh.rotateY(Math.PI);
 
           scene.add(mesh);
 
