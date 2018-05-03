@@ -85,7 +85,7 @@ function createLights() {
 
 
 function loop(){
-	
+   updateFlamingo();	
   requestAnimationFrame(loop);
   //camera.rotation.z += 0.001;
 
@@ -104,7 +104,7 @@ function loop(){
 function init(event){
   
   //window.addEventListener('mousemove', handleMouseMove);
-  //window.addEventListener('devicemotion', handleOrientation);
+  window.addEventListener('devicemotion', handleOrientation);
 
   createScene();
   createLights();
@@ -139,7 +139,19 @@ function init(event){
   
   loop();
 }
+var fPos;
 
+function updateFlamingo(){
+	flamingo.position.x = fPos;
+	if(flamingo.position.x > 200)
+		flamingo.position.x = 200;
+	else if(flamingo.position.x < -200)
+		flamingo.position.x = -200;
+}
+
+function handleOrientation(event){
+	fPos = event.accelerationIncludingGravity.y;
+}
 
 
 window.addEventListener('load', init, false);
