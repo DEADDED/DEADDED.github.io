@@ -104,7 +104,7 @@ function loop(){
 function init(event){
   
   //window.addEventListener('mousemove', handleMouseMove);
-  window.addEventListener('devicemotion', handleOrientation);
+  //window.addEventListener('devicemotion', handleOrientation);
 
   createScene();
   createLights();
