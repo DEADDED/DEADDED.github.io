@@ -122,7 +122,7 @@ function init(event){
           var mesh = new THREE.Mesh(geometry, material);
 
           mesh.position.x = 0;
-          mesh.position.y = 150;
+          mesh.position.y = 100;
           mesh.scale.set(1.5,1.5,1.5);
 	  mesh.rotateY(Math.PI);
 
