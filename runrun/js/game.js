@@ -3,6 +3,8 @@ var scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
     renderer, container, clock, mixer;
 
+var flamingo;
+
 var HEIGHT, WIDTH;
 
 
@@ -92,6 +94,7 @@ function loop(){
 				/*for ( var i = 0; i < mixers.length; i ++ ) {
 					mixers[ i ].update( delta );
 				}*/
+  flamingo.rotation.z += 0.1;
   renderer.clear();
   renderer.render(scene, camera);
   
@@ -119,16 +122,16 @@ function init(event){
             flatShading: true 
           } );
           
-          var mesh = new THREE.Mesh(geometry, material);
+          flamingo = new THREE.Mesh(geometry, material);
 
-          mesh.position.x = 0;
-          mesh.position.y = 100;
-          mesh.scale.set(1.5,1.5,1.5);
-	  mesh.rotateY(Math.PI);
+          flamingo.position.x = 0;
+          flamingo.position.y = 100;
+          flamingo.scale.set(1.5,1.5,1.5);
+	  flamingo.rotateY(Math.PI);
 
-          scene.add(mesh);
+          scene.add(flamingo);
 
-          mixer = new THREE.AnimationMixer(mesh);
+          mixer = new THREE.AnimationMixer(flamingo);
           mixer.clipAction(geometry.animations[0]).setDuration(1).play();
 
 				} );
