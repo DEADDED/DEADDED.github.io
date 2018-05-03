@@ -83,7 +83,8 @@ function createLights() {
 
 
 function loop(){
-
+	
+  requestAnimationFrame(loop);
   //camera.rotation.z += 0.001;
 
   var delta = clock.getDelta();
@@ -91,8 +92,9 @@ function loop(){
 				/*for ( var i = 0; i < mixers.length; i ++ ) {
 					mixers[ i ].update( delta );
 				}*/
+  renderer.clear();
   renderer.render(scene, camera);
-  requestAnimationFrame(loop);
+  
 }
 
 
