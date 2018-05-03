@@ -85,7 +85,7 @@ function createLights() {
 
 
 function loop(){
-   updateFlamingo();	
+   //updateFlamingo();	
   requestAnimationFrame(loop);
   //camera.rotation.z += 0.001;
 
@@ -139,7 +139,7 @@ function init(event){
   
   loop();
 }
-var fPos;
+/*var fPos;
 
 function updateFlamingo(){
 	flamingo.position.x = fPos;
@@ -152,6 +152,6 @@ function updateFlamingo(){
 function handleOrientation(event){
 	fPos = event.accelerationIncludingGravity.y;
 }
-
+*/
 
 window.addEventListener('load', init, false);
