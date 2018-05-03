@@ -130,7 +130,7 @@ function init(event){
 	  flamingo.rotateY(Math.PI);
 
           scene.add(flamingo);
-		alert(geometry.animations.length);
+		
           mixer = new THREE.AnimationMixer(flamingo);
           mixer.clipAction(geometry.animations[0]).setDuration(1).play();
 
