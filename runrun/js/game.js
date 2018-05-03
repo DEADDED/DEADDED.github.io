@@ -98,8 +98,8 @@ function loop(){
 
 function init(event){
   
-  window.addEventListener('mousemove', handleMouseMove);
-  window.addEventListener('devicemotion', handleOrientation);
+  //window.addEventListener('mousemove', handleMouseMove);
+  //window.addEventListener('devicemotion', handleOrientation);
 
   createScene();
   createLights();
@@ -109,7 +109,7 @@ function init(event){
   //mixer = new THREE.AnimationMixer( scene );
 
   var loader = new THREE.JSONLoader();
-				loader.load( 'flamingo.js', function( geometry ) {
+				loader.load( 'js/flamingo.js', function( geometry ) {
 					var material = new THREE.MeshPhongMaterial( { 
             color: 0xffffff, 
             morphTargets: true, 
