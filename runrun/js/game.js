@@ -136,7 +136,7 @@ function init(event){
 
 				} );
 
-  
+  alert(geometry.animations.length);
   loop();
 }
 /*var fPos;
