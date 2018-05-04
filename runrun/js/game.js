@@ -128,7 +128,7 @@ function init(event){
           flamingo = new THREE.Mesh(geometry, material);
 
           flamingo.position.x = 0;
-          flamingo.position.y = 100;
+          flamingo.position.y = 50;
           flamingo.scale.set(1.5,1.5,1.5);
 	  flamingo.rotateY(Math.PI);
 
