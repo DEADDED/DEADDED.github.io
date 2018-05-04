@@ -95,8 +95,8 @@ function loop(){
 				/*for ( var i = 0; i < mixers.length; i ++ ) {
 					mixers[ i ].update( delta );
 				}*/
-  flamingo.rotation.y += 0.1;
-	flamingo.position.x += 0.1;
+  //flamingo.rotation.y += 0.1;
+	flamingo.position.x += 1;
   renderer.clear();
   renderer.render(scene, camera);
   
