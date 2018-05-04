@@ -96,7 +96,7 @@ function loop(){
 					mixers[ i ].update( delta );
 				}*/
   //flamingo.rotation.y += 0.1;
-	flamingo.position.x += 0.01;
+	flamingo.position.x += 0.1;
   renderer.clear();
   renderer.render(scene, camera);
   
