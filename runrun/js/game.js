@@ -146,10 +146,10 @@ var fPos;
 
 function updateFlamingo(){
 	flamingo.position.x += fPos;
-	if(flamingo.position.x > 300)
-		flamingo.position.x = 300;
-	else if(flamingo.position.x < -300)
-		flamingo.position.x = -300;
+	if(flamingo.position.x > 350)
+		flamingo.position.x = 350;
+	else if(flamingo.position.x < -350)
+		flamingo.position.x = -350;
 }
 
 function handleOrientation(event){
