@@ -156,13 +156,13 @@ function updateFlamingo(){
 		flamingo.rotation.y += 0.01;
 	else if (oldPos> fPos)
 		flamingo.rotation.y -= 0.01;
-	else
+	/*else
 		flamingo.rotation.y = 0;
 	
 	if(flamingo.rotation.y >= Math.PI / 4)
 		flamingo.rotation.y = Math.PI/4;
 	else if(flamingo.rotation.y <= -Math.PI/4)
-		flamingo.rotation.y = -Math.PI/4;
+		flamingo.rotation.y = -Math.PI/4;*/
 }
 
 function handleOrientation(event){
