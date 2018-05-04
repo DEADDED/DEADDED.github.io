@@ -86,7 +86,7 @@ function createLights() {
 
 function loop(){
    //updateFlamingo();	
-	flamingo.position.x += 0.01;
+	
   requestAnimationFrame(loop);
   //camera.rotation.z += 0.001;
 
@@ -96,6 +96,7 @@ function loop(){
 					mixers[ i ].update( delta );
 				}*/
   //flamingo.rotation.y += 0.1;
+	flamingo.position.x += 0.01;
   renderer.clear();
   renderer.render(scene, camera);
   
