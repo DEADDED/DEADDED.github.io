@@ -145,7 +145,7 @@ function init(event){
 var fPos;
 
 function updateFlamingo(){
-	flamingo.position.x = fPos;
+	flamingo.position.x += fPos;
 	if(flamingo.position.x > 200)
 		flamingo.position.x = 200;
 	else if(flamingo.position.x < -200)
