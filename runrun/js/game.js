@@ -162,7 +162,7 @@ function updateFlamingo(){
 	if(flamingo.rotaion.y >= MATH.PI / 4)
 		flamingo.rotaion.y = MATH.PI/4;
 	else if(flamingo.rotation.y <= -MATH.PI/4)
-		flamingo.rotation.y = -MATH.PI/4);
+		flamingo.rotation.y = -MATH.PI/4;
 }
 
 function handleOrientation(event){
