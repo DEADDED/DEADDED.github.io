@@ -96,7 +96,8 @@ function loop(){
 					mixers[ i ].update( delta );
 				}*/
   //flamingo.rotation.y += 0.1;
-	flamingo.position.x += 1;
+	//flamingo.position.x += 1;
+	updateFlamingo();	
   renderer.clear();
   renderer.render(scene, camera);
   
@@ -106,7 +107,7 @@ function loop(){
 function init(event){
   
   //window.addEventListener('mousemove', handleMouseMove);
-  //window.addEventListener('devicemotion', handleOrientation);
+  window.addEventListener('devicemotion', handleOrientation);
 
   createScene();
   createLights();
@@ -141,7 +142,7 @@ function init(event){
   
   loop();
 }
-/*var fPos;
+var fPos;
 
 function updateFlamingo(){
 	flamingo.position.x = fPos;
@@ -154,6 +155,6 @@ function updateFlamingo(){
 function handleOrientation(event){
 	fPos = event.accelerationIncludingGravity.y;
 }
-*/
+
 
 window.addEventListener('load', init, false);
