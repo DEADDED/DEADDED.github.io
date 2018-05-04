@@ -86,6 +86,7 @@ function createLights() {
 
 function loop(){
    //updateFlamingo();	
+	flamingo.position.x += 0.01;
   requestAnimationFrame(loop);
   //camera.rotation.z += 0.001;
 
@@ -114,8 +115,8 @@ function init(event){
   //mixer = new THREE.AnimationMixer( scene );
 
   var loader = new THREE.JSONLoader();
-				loader.load( 'js/flamingo.js', function( geometry ) {
-					var material = new THREE.MeshPhongMaterial( { 
+	loader.load( 'js/flamingo.js', function( geometry ) {
+	var material = new THREE.MeshPhongMaterial( { 
             color: 0xffffff, 
             morphTargets: true, 
             vertexColors: THREE.FaceColors, 
