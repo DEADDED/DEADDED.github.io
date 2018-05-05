@@ -158,8 +158,8 @@ function updateFlamingo(){
 	else if (oldPos> fPos)
 		flamingo.rotation.z -= 0.03;
 	
-	//else
-		//flamingo.rotation.z = 0;
+	else
+		flamingo.rotation.z = - Math.PI;
 	
 	/*if(flamingo.rotation.z >= Math.PI / 4)
 		flamingo.rotation.z = Math.PI/4;
