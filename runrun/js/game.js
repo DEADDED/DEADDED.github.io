@@ -24,7 +24,7 @@ function createScene() {
     nearPlane,
     farPlane
     );
-  scene.fog = new THREE.Fog(0xff0000, 100,950);
+  scene.fog = new THREE.Fog(0x000000, 100,950);
   camera.position.x = 0;
   camera.position.z = 500;
   camera.position.y = 200;
@@ -80,7 +80,7 @@ function createLights() {
 
 
 Sea = function(){
-  var geom = new THREE.CylinderGeometry(600,600,800,40,10);
+  var geom = new THREE.CylinderGeometry(1200,600,800,40,10);
   geom.applyMatrix(new THREE.Matrix4().makeRotationX(-Math.PI/2));
   geom.mergeVertices();
   var l = geom.vertices.length;
