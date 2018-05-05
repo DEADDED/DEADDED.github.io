@@ -153,17 +153,17 @@ function updateFlamingo(){
 		flamingo.position.x = -400;
 	
 	if(oldPos < fPos)
-		flamingo.rotation.z += 0.01;
+		flamingo.rotation.z += 0.1;
 	else if (oldPos> fPos)
-		flamingo.rotation.z -= 0.01;
+		flamingo.rotation.z -= 0.1;
 	
 	//else
 		//flamingo.rotation.z = 0;
 	
-	if(flamingo.rotation.z >= Math.PI / 4)
+	/*if(flamingo.rotation.z >= Math.PI / 4)
 		flamingo.rotation.z = Math.PI/4;
 	else if(flamingo.rotation.z <= -Math.PI/4)
-		flamingo.rotation.z = -Math.PI/4;
+		flamingo.rotation.z = -Math.PI/4;*/
 	oldPos = fPos;
 }
 
