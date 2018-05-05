@@ -80,7 +80,7 @@ function createLights() {
 
 
 Sea = function(){
-  var geom = new THREE.CylinderGeometry(1200,600,800,40,10);
+  var geom = new THREE.CylinderGeometry(800,600,800,40,10);
   geom.applyMatrix(new THREE.Matrix4().makeRotationX(-Math.PI/2));
   geom.mergeVertices();
   var l = geom.vertices.length;
