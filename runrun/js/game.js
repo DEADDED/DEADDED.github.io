@@ -128,7 +128,7 @@ function init(event){
           flamingo = new THREE.Mesh(geometry, material);
 
           flamingo.position.x = 0;
-          flamingo.position.y = 50;
+          flamingo.position.y = 100;
           flamingo.scale.set(1.5,1.5,1.5);
 	  flamingo.rotateY(Math.PI);
 
@@ -147,18 +147,19 @@ var fPos, oldPos;
 function updateFlamingo(){
 	
 	flamingo.position.x += fPos;
+	flamingo.rotation.z += fPos/100;
 	if(flamingo.position.x > 400)
 		flamingo.position.x = 400;
 	else if(flamingo.position.x < -400)
 		flamingo.position.x = -400;
 	
-	if(oldPos < fPos)
+	/*if(oldPos < fPos)
 		flamingo.rotation.z += 0.03;
 	else if (oldPos> fPos)
 		flamingo.rotation.z -= 0.03;
 	
 	else
-		flamingo.rotation.z = - Math.PI;
+		flamingo.rotation.z = - Math.PI;*/
 	
 	/*if(flamingo.rotation.z >= Math.PI / 4)
 		flamingo.rotation.z = Math.PI/4;
