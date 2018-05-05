@@ -24,7 +24,7 @@ function createScene() {
     nearPlane,
     farPlane
     );
-  scene.fog = new THREE.Fog(0x000000, 100,950);
+  scene.fog = new THREE.Fog(0xffffff, 100,950);
   camera.position.x = 0;
   camera.position.z = 500;
   camera.position.y = 200;
