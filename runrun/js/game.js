@@ -126,7 +126,7 @@ Sea.prototype.moveWaves = function (){
 
 function createSea(){
   sea = new Sea();
-  sea.mesh.position.y = -600;
+  sea.mesh.position.y = -1000;
   scene.add(sea.mesh);
 }
 
