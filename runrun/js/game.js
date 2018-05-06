@@ -18,8 +18,8 @@ function createScene() {
   scene = new THREE.Scene();
   aspectRatio = WIDTH / HEIGHT;
   fieldOfView = 60;
-  nearPlane = 100;
-  farPlane = 1000;
+  nearPlane = 1;
+  farPlane = 2000000;
   camera = new THREE.PerspectiveCamera(
     fieldOfView,
     aspectRatio,
@@ -28,7 +28,7 @@ function createScene() {
     );
   scene.fog = new THREE.Fog(0xd96784, 100,950);
   camera.position.x = 0;
-  camera.position.z = 500;
+  camera.position.z = 200;
   camera.position.y = 200;
   
   //camera.rotation.z = Math.PI / 2;
