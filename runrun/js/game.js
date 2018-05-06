@@ -219,7 +219,7 @@ var fPos, oldPos;
 
 function updateFlamingo(){
 	
-	alert(flamingo.isMesh);
+	
 	flamingo.position.x += fPos;
 	//flamingo.rotation.z += fPos/300;
 	if(flamingo.position.x > 400)
@@ -250,3 +250,9 @@ function handleOrientation(event){
 
 
 window.addEventListener('load', init, false);
+for (var key in flamingo) {
+  // этот код будет вызван для каждого свойства объекта
+  // ..и выведет имя свойства и его значение
+
+  alert( "Ключ: " + key + " значение: " + flamingo[key] );
+}
