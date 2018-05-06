@@ -108,7 +108,8 @@ Ground = function(){
   }
 
   var material = new THREE.MeshPhongMaterial({
-    color: 0x04579A});
+    color: 0x04579A,
+    shading:THREE.FlatShading});
 
   this.mesh = new THREE.Mesh(geom,material);
 
@@ -207,7 +208,7 @@ function init(event){
 				} );
   
   var flaPos = new THREE.Vector3();
-  flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
+  //flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
 	alert(flaPos);
 	//treePos.distanceTo(heroSphere.position)
   //alert(flaPos.distanceTo(ground.position));
