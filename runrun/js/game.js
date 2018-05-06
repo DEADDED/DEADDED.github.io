@@ -3,7 +3,7 @@ var scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
     renderer, container, clock, mixer;
 
-var flamingo;
+var flamingo = new THREE.Odject3D();
 
 var HEIGHT, WIDTH;
 
@@ -108,8 +108,7 @@ Ground = function(){
   }
 
   var material = new THREE.MeshPhongMaterial({
-    color: 0x04579A,
-    shading:THREE.FlatShading});
+    color: 0x04579A});
 
   this.mesh = new THREE.Mesh(geom,material);
 
@@ -191,7 +190,7 @@ function init(event){
             vertexColors: THREE.FaceColors, 
             flatShading: true 
           } );
-          flamingo = new THREE.Object3D();
+          
           flamingo.mesh = new THREE.Mesh(geometry, material);
 
           flamingo.mesh.position.x = 0;
