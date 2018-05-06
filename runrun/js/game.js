@@ -206,8 +206,9 @@ function init(event){
           mixer.clipAction(geometry.animations[0]).setDuration(1).play();
 
 				} );
-
-  var flaPos = flaPos.setFromMatrixPosition( flamingo.mesh.matrixWorld );
+  
+  var flaPos = new THREE.Vector3();
+  flaPos = flaPos.setFromMatrixPosition( flamingo.mesh.matrixWorld );
 	//treePos.distanceTo(heroSphere.position)
   alert(flaPos.distanceTo(Ground.position));
   loop();
@@ -236,7 +237,7 @@ function updateFlamingo(){
 	else if(flamingo.rotation.z <= -Math.PI/4)
 		flamingo.rotation.z = -Math.PI/4;*/
 	oldPos = fPos;
-	 var flaPos = new THREE.Vector3();
+	 
  
 }
 
