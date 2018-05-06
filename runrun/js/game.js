@@ -219,7 +219,7 @@ var fPos, oldPos;
 
 function updateFlamingo(){
 	
-	alert(flamingo.isObject);
+	alert(flamingo.isMesh);
 	flamingo.position.x += fPos;
 	//flamingo.rotation.z += fPos/300;
 	if(flamingo.position.x > 400)
