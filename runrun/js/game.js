@@ -191,35 +191,36 @@ function init(event){
             vertexColors: THREE.FaceColors, 
             flatShading: true 
           } );
-          
-          flamingo = new THREE.Mesh(geometry, material);
+          flamingo = new THREE.Object3D();
+          flamingo.mesh = new THREE.Mesh(geometry, material);
 
-          flamingo.position.x = 0;
-          flamingo.position.y = 180;
-	  flamingo.position.z = 80;
-          flamingo.scale.set(.5,.5,.5);
-	  flamingo.rotateY(Math.PI);
+          flamingo.mesh.position.x = 0;
+          flamingo.mesh.position.y = 180;
+	  flamingo.mesh.position.z = 80;
+          flamingo.mesh.scale.set(.5,.5,.5);
+	  flamingo.mesh.rotateY(Math.PI);
 
-          scene.add(flamingo);
+          scene.add(flamingo.mesh);
 		
-          mixer = new THREE.AnimationMixer(flamingo);
+          mixer = new THREE.AnimationMixer(flamingo.mesh);
           mixer.clipAction(geometry.animations[0]).setDuration(1).play();
 
 				} );
 
-  
+  /*var flaPos = new THREE.Vector3();
+  flaPos = flaPos.setFromMatrixPosition( oneTree.matrixWorld );*/
   loop();
 }
 var fPos, oldPos;
 
 function updateFlamingo(){
 	
-	flamingo.position.x += fPos;
+	flamingo.mesh.position.x += fPos;
 	//flamingo.rotation.z += fPos/300;
-	if(flamingo.position.x > 400)
-		flamingo.position.x = 400;
-	else if(flamingo.position.x < -400)
-		flamingo.position.x = -400;
+	if(flamingo.mesh.position.x > 400)
+		flamingo.mesh.position.x = 400;
+	else if(flamingo.mesh.position.x < -400)
+		flamingo.mesh.position.x = -400;
 	
 	/*if(oldPos < fPos)
 		flamingo.rotation.z += 0.03;
