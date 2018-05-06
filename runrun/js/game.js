@@ -3,7 +3,7 @@ var scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
     renderer, container, clock, mixer;
 
-var flamingo = new THREE.Object3D();
+var flamingo;
 
 var HEIGHT, WIDTH;
 
@@ -192,17 +192,17 @@ function init(event){
             flatShading: true 
           } );
           
-          var mesh = new THREE.Mesh(geometry, material);
-	  flamingo.add(mesh);
-          flamingo.mesh.position.x = 0;
-          flamingo.mesh.position.y = 180;
-	  flamingo.mesh.position.z = 80;
-          flamingo.mesh.scale.set(.5,.5,.5);
-	  flamingo.mesh.rotateY(Math.PI);
+          flamingo = new THREE.Mesh(geometry, material);
+	  
+          flamingo.position.x = 0;
+          flamingo.position.y = 180;
+	  flamingo.position.z = 80;
+          flamingo.scale.set(.5,.5,.5);
+	  flamingo.rotateY(Math.PI);
 
-          scene.add(flamingo.mesh);
+          scene.add(flamingo);
 		
-          mixer = new THREE.AnimationMixer(flamingo.mesh);
+          mixer = new THREE.AnimationMixer(flamingo);
           mixer.clipAction(geometry.animations[0]).setDuration(1).play();
 
 				} );
@@ -218,12 +218,12 @@ var fPos, oldPos;
 
 function updateFlamingo(){
 	
-	flamingo.mesh.position.x += fPos;
+	flamingo.position.x += fPos;
 	//flamingo.rotation.z += fPos/300;
-	if(flamingo.mesh.position.x > 400)
-		flamingo.mesh.position.x = 400;
-	else if(flamingo.mesh.position.x < -400)
-		flamingo.mesh.position.x = -400;
+	if(flamingo.position.x > 400)
+		flamingo.position.x = 400;
+	else if(flamingo.position.x < -400)
+		flamingo.position.x = -400;
 	
 	/*if(oldPos < fPos)
 		flamingo.rotation.z += 0.03;
