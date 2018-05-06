@@ -194,11 +194,11 @@ function init(event){
           
           flamingo.mesh = new THREE.Mesh(geometry, material);
 
-          flamingo.mesh.position.x = 0;
-          flamingo.mesh.position.y = 180;
-	  flamingo.mesh.position.z = 80;
-          flamingo.mesh.scale.set(.5,.5,.5);
-	  flamingo.mesh.rotateY(Math.PI);
+          flamingo.position.x = 0;
+          flamingo.position.y = 180;
+	  flamingo.position.z = 80;
+          flamingo.scale.set(.5,.5,.5);
+	  flamingo.rotateY(Math.PI);
 
           scene.add(flamingo.mesh);
 		
