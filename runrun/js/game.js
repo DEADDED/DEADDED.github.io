@@ -18,7 +18,7 @@ function createScene() {
   scene = new THREE.Scene();
   aspectRatio = WIDTH / HEIGHT;
   fieldOfView = 60;
-  nearPlane = 1;
+  nearPlane = 100;
   farPlane = 1000;
   camera = new THREE.PerspectiveCamera(
     fieldOfView,
@@ -61,7 +61,7 @@ var ambientLight, hemisphereLight, shadowLight;
 
 function createLights() {
 
-  hemisphereLight = new THREE.HemisphereLight(0xaaaaaa,0x000000, .9)
+  hemisphereLight = new THREE.HemisphereLight(0xaaaaaa,0xffffff, .9)
   shadowLight = new THREE.DirectionalLight(0xffffff, .9);
   shadowLight.position.set(150, 350, 350);
   shadowLight.castShadow = true;
