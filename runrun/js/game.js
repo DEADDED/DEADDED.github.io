@@ -3,7 +3,7 @@ var scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
     renderer, container, clock, mixer;
 
-var flamingo = new THREE.Odject3D();
+var flamingo = new THREE.Object3D();
 
 var HEIGHT, WIDTH;
 
