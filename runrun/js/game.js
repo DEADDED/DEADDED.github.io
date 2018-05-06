@@ -227,6 +227,13 @@ function updateFlamingo(){
 	else if(flamingo.position.x < -400)
 		flamingo.position.x = -400;
 	
+	
+	for (var key in flamingo) {
+  // этот код будет вызван для каждого свойства объекта
+  // ..и выведет имя свойства и его значение
+
+  alert( "Ключ: " + key + " значение: " + flamingo[key] );
+}
 	/*if(oldPos < fPos)
 		flamingo.rotation.z += 0.03;
 	else if (oldPos> fPos)
@@ -250,9 +257,4 @@ function handleOrientation(event){
 
 
 window.addEventListener('load', init, false);
-for (var key in flamingo) {
-  // этот код будет вызван для каждого свойства объекта
-  // ..и выведет имя свойства и его значение
 
-  alert( "Ключ: " + key + " значение: " + flamingo[key] );
-}
