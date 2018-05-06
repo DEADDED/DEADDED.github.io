@@ -207,10 +207,7 @@ function init(event){
 
 				} );
 
- /* var flaPos = new THREE.Vector3();
-  flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
-	//treePos.distanceTo(heroSphere.position)
-  alert(flaPos.distanceTo(Ground.position));*/
+ 
   loop();
 }
 var fPos, oldPos;
@@ -237,6 +234,10 @@ function updateFlamingo(){
 	else if(flamingo.rotation.z <= -Math.PI/4)
 		flamingo.rotation.z = -Math.PI/4;*/
 	oldPos = fPos;
+	 var flaPos = new THREE.Vector3();
+  flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
+	//treePos.distanceTo(heroSphere.position)
+  alert(flaPos.distanceTo(Ground.position));
 }
 
 function handleOrientation(event){
