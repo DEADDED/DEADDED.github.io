@@ -7,6 +7,8 @@ var flamingo;
 
 var HEIGHT, WIDTH;
 
+var ground;
+
 
 function createScene() {
 
@@ -78,7 +80,70 @@ function createLights() {
 
 
 
+Ground = function(){
+  
+  var geom = new THREE.SphereGeometry(1000,30,30);
 
+  geom.applyMatrix(new THREE.Matrix4().makeRotationX(-Math.PI/2));
+  geom.applyMatrix(new THREE.Matrix4().makeRotationY(Math.PI/2));
+
+
+  geom.mergeVertices();
+
+  var l = geom.vertices.length;
+
+  this.waves = [];
+
+  for(var i = 0; i < l; i++){
+
+    var v = geom.vertices[i];
+
+    this.waves.push({y: v.y,
+                     x: v.x,
+                     z: v.z,
+                     ang: Math.random()*Math.PI*2,
+                     amp: 5 + Math.random() * 15,
+                     speed: 0.016 + Math.random() * 0.032
+                  });
+  }
+
+  var material = new THREE.MeshPhongMaterial({
+    color: 0x04579A,
+    shading:THREE.FlatShading});
+
+  this.mesh = new THREE.Mesh(geom,material);
+
+  this.mesh.recieveShadow = true;
+}
+
+Ground.prototype.moveWaves = function(){
+
+  var verts = this.mesh.geometry.vertices;
+  var l = verts.length;
+
+  for(var i = 0; i < l; i++){
+    var v = verts[i];
+    var vprops = this.waves[i];
+    
+    v.x = vprops.x + Math.cos(vprops.ang)*vprops.amp;
+    v.y = vprops.y + Math.sin(vprops.ang)*vprops.amp;
+
+    vprops.ang += vprops.speed;
+
+  }
+
+  this.mesh.geometry.verticesNeedUpdate = true;
+
+}
+
+function createGround(){
+  ground = new Ground();
+
+  ground.mesh.position.y = -750;
+  ground.mesh.position.z = -400;
+
+  scene.add(ground.mesh);
+}
 
 
 
@@ -97,6 +162,8 @@ function loop(){
 				}*/
   //flamingo.rotation.y += 0.1;
 	//flamingo.position.x += 1;
+	ground.moveWaves();
+  ground.mesh.rotation.x += 0.005;
 	updateFlamingo();	
   renderer.clear();
   renderer.render(scene, camera);
@@ -111,7 +178,7 @@ function init(event){
 
   createScene();
   createLights();
-
+  createGround();
   clock = new THREE.Clock();
 
   //mixer = new THREE.AnimationMixer( scene );
