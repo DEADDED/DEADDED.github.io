@@ -192,13 +192,13 @@ function init(event){
             flatShading: true 
           } );
           
-          flamingo.mesh = new THREE.Mesh(geometry, material);
-
-          flamingo.position.x = 0;
-          flamingo.position.y = 180;
-	  flamingo.position.z = 80;
-          flamingo.scale.set(.5,.5,.5);
-	  flamingo.rotateY(Math.PI);
+          var mesh = new THREE.Mesh(geometry, material);
+	  flamingo.add(mesh);
+          flamingo.mesh.position.x = 0;
+          flamingo.mesh.position.y = 180;
+	  flamingo.mesh.position.z = 80;
+          flamingo.mesh.scale.set(.5,.5,.5);
+	  flamingo.mesh.rotateY(Math.PI);
 
           scene.add(flamingo.mesh);
 		
@@ -209,7 +209,7 @@ function init(event){
   
   var flaPos = new THREE.Vector3();
   //flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
-	alert(flaPos);
+	//alert(flaPos);
 	//treePos.distanceTo(heroSphere.position)
   //alert(flaPos.distanceTo(ground.position));
   loop();
