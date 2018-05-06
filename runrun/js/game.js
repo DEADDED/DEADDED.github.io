@@ -208,11 +208,7 @@ function init(event){
 				} );
 	
   
-  var flaPos = new THREE.Vector3();
-  //flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
-	//alert(flaPos);
-	//treePos.distanceTo(heroSphere.position)
-  //alert(flaPos.distanceTo(ground.position));
+ 
   loop();
 }
 var fPos, oldPos;
@@ -228,12 +224,11 @@ function updateFlamingo(){
 		flamingo.position.x = -400;
 	
 	
-	for (var key in flamingo) {
-  // этот код будет вызван для каждого свойства объекта
-  // ..и выведет имя свойства и его значение
-
-  alert( "Ключ: " + key + " значение: " + flamingo[key] );
-}
+	 var flaPos = new THREE.Vector3();
+  flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
+	//alert(flaPos);
+	//treePos.distanceTo(heroSphere.position)
+  Console.log(flaPos.distanceTo(ground.position));
 	/*if(oldPos < fPos)
 		flamingo.rotation.z += 0.03;
 	else if (oldPos> fPos)
