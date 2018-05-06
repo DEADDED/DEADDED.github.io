@@ -195,7 +195,7 @@ function init(event){
           flamingo = new THREE.Mesh(geometry, material);
 
           flamingo.position.x = 0;
-          flamingo.position.y = 150;
+          flamingo.position.y = 180;
 	  flamingo.position.z = 80;
           flamingo.scale.set(.5,.5,.5);
 	  flamingo.rotateY(Math.PI);
