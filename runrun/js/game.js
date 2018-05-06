@@ -207,7 +207,7 @@ function init(event){
 
 				} );
 
-  flaPos = flaPos.setFromMatrixPosition( flamingo.mesh.matrixWorld );
+  var flaPos = flaPos.setFromMatrixPosition( flamingo.mesh.matrixWorld );
 	//treePos.distanceTo(heroSphere.position)
   alert(flaPos.distanceTo(Ground.position));
   loop();
