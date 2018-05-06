@@ -210,7 +210,7 @@ function init(event){
   var flaPos = new THREE.Vector3();
   flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
 	//treePos.distanceTo(heroSphere.position)
-  alert(flaPos.distanceTo(Ground.position);
+  alert(flaPos.distanceTo(Ground.position));
   loop();
 }
 var fPos, oldPos;
