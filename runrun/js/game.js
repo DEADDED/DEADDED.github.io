@@ -206,6 +206,7 @@ function init(event){
           mixer.clipAction(geometry.animations[0]).setDuration(1).play();
 
 				} );
+	alert(flamingo.isObject);
   
   var flaPos = new THREE.Vector3();
   //flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
