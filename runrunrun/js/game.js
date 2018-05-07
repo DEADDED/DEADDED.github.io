@@ -150,7 +150,7 @@ function init(event){
   
   clock = new THREE.Clock();
 
-  /var loader = new THREE.JSONLoader();
+  var loader = new THREE.JSONLoader();
 	loader.load( 'js/flamingo.js', function( geometry ) {
 	var material = new THREE.MeshPhongMaterial( { 
             color: 0xffffff, 
