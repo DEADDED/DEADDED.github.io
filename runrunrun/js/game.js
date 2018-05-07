@@ -29,8 +29,8 @@ function createScene() {
   scene.fog = new THREE.Fog(0x04579A, 100,950);
   camera.position.x = 0;
 	camera.position.z = 200;
-	camera.position.y = 100;
- // camera.roateX(M)
+	camera.position.y = 0;
+ camera.roateX(-Math.PI / 6);
   
   //camera.rotation.z = Math.PI / 2;
  
