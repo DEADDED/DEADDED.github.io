@@ -30,7 +30,7 @@ function createScene() {
   camera.position.x = 0;
 	camera.position.z = 100;
 	camera.position.y = 0;
- camera.rotateX(Math.PI / 12);
+ camera.rotateX(Math.PI / 9);
   
   //camera.rotation.z = Math.PI / 2;
  
