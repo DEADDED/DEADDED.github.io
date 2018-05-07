@@ -28,7 +28,7 @@ function createScene() {
     );
   scene.fog = new THREE.Fog(0x04579A, 100,950);
   camera.position.x = 0;
-	camera.position.z = 200;
+	camera.position.z = 100;
 	camera.position.y = 0;
  camera.rotateX(Math.PI / 12);
   
@@ -164,7 +164,7 @@ function init(event){
           flamingo = new THREE.Mesh(geometry, material);
 	  
           flamingo.position.x = 0;
-          flamingo.position.y = 100;
+          flamingo.position.y = 0;
 	  flamingo.position.z = 100;
           flamingo.scale.set(.1,.1,.1);
 	  flamingo.rotateY(Math.PI);
