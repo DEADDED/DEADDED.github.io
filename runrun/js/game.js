@@ -197,7 +197,7 @@ function init(event){
           flamingo.position.x = 100;
           flamingo.position.y = 180;
 	  flamingo.position.z = 80;
-          flamingo.scale.set(.5,.5,.5);
+          flamingo.scale.set(.3,.3,.3);
 	  flamingo.rotateY(Math.PI);
 
           scene.add(flamingo);
