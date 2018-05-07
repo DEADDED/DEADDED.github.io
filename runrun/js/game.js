@@ -217,7 +217,9 @@ function updateFlamingo(){
 	
 	
 	flamingo.position.x += fPos;
-	//flamingo.rotation.z += fPos/300;
+	flamingo.position.x += 0.001;
+		
+		//flamingo.rotation.z += fPos/300;
 	if(flamingo.position.x > 400)
 		flamingo.position.x = 400;
 	else if(flamingo.position.x < -400)
