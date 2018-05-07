@@ -128,7 +128,7 @@ Ground.prototype.moveWaves = function(){
     v.x = vprops.x + Math.cos(vprops.ang)*vprops.amp;
     v.y = vprops.y + Math.sin(vprops.ang)*vprops.amp;
 
-    vprops.ang += vprops.speed;
+    //vprops.ang += vprops.speed;
 
   }
 
