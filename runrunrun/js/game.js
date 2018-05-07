@@ -86,7 +86,7 @@ Sea = function(){
 	// create the geometry (shape) of the cylinder;
 	// the parameters are: 
 	// radius top, radius bottom, height, number of segments on the radius, number of segments vertically
-	var geom = new THREE.CylinderGeometry(1000,1000,1000,40,10);
+	var geom = new THREE.CylinderGeometry(1000,1000,1000,80,40);
 	
 	// rotate the geometry on the x axis
 	//geom.applyMatrix(new THREE.Matrix4().makeRotationX(-Math.PI/2));
@@ -168,7 +168,7 @@ function init(event){
 	  flamingo.position.z = 100;
           flamingo.scale.set(.1,.1,.1);
 	  flamingo.rotateY(Math.PI);
-	  flamingo.rotateZ(-Math.PI/2);
+	  flamingo.rotateX(-Math.PI/2);
 
           scene.add(flamingo);
 		
