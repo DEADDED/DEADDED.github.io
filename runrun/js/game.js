@@ -103,7 +103,7 @@ Ground = function(){
                      z: v.z,
                      ang: Math.random()*Math.PI*2,
                      amp: 5 + Math.random() * 30,
-                     speed: 0.016 + Math.random() * 0.062
+                     speed: 0.032 + Math.random() * 0.062
                   });
   }
 
@@ -128,7 +128,7 @@ Ground.prototype.moveWaves = function(){
     v.x = vprops.x + Math.cos(vprops.ang)*vprops.amp;
     v.y = vprops.y + Math.sin(vprops.ang)*vprops.amp;
 
-    //vprops.ang += vprops.speed;
+    vprops.ang += vprops.speed;
 
   }
 
