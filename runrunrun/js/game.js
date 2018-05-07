@@ -6,6 +6,7 @@ var scene,
 var HEIGHT, WIDTH;
 
 var sea;
+var flamingo, clock;
 
 var basicGroundRotation = 0.005;
 
@@ -149,29 +150,29 @@ function init(event){
   
   clock = new THREE.Clock();
 
-  //mixer = new THREE.AnimationMixer( scene );
-
-  /*var loader = new THREE.JSONLoader();
-				loader.load( 'flamingo.js', function( geometry ) {
-					var material = new THREE.MeshPhongMaterial( { 
+  /var loader = new THREE.JSONLoader();
+	loader.load( 'js/flamingo.js', function( geometry ) {
+	var material = new THREE.MeshPhongMaterial( { 
             color: 0xffffff, 
             morphTargets: true, 
             vertexColors: THREE.FaceColors, 
             flatShading: true 
           } );
           
-          var mesh = new THREE.Mesh(geometry, material);
+          flamingo = new THREE.Mesh(geometry, material);
+	  
+          flamingo.position.x = 0;
+          flamingo.position.y = 100;
+	  flamingo.position.z = 100;
+          flamingo.scale.set(.5,.5,.5);
+	  flamingo.rotateY(Math.PI);
 
-          mesh.position.x = 150;
-          mesh.position.y = 150;
-          mesh.scale.set(1.5,1.5,1.5);
-
-          scene.add(mesh);
-
-          mixer = new THREE.AnimationMixer(mesh);
+          scene.add(flamingo);
+		
+          mixer = new THREE.AnimationMixer(flamingo);
           mixer.clipAction(geometry.animations[0]).setDuration(1).play();
 
-				} );*/
+				} );
 
   
   loop();
