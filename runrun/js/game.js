@@ -217,7 +217,6 @@ function updateFlamingo(){
 	
 	
 	flamingo.position.x += fPos;
-	flamingo.position.x += 0.001;
 		
 		//flamingo.rotation.z += fPos/300;
 	if(flamingo.position.x > 400)
@@ -230,7 +229,7 @@ function updateFlamingo(){
   flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
 	//alert(flaPos);
 	//treePos.distanceTo(heroSphere.position)
-  console.log(flaPos.distanceTo(ground.mesh.position));
+  //console.log(flaPos.distanceTo(ground.mesh.position));
 	/*if(oldPos < fPos)
 		flamingo.rotation.z += 0.03;
 	else if (oldPos> fPos)
