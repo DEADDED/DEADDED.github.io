@@ -88,7 +88,7 @@ Ground = function(){
   geom.applyMatrix(new THREE.Matrix4().makeRotationY(Math.PI/2));
 
 
-  geom.mergeVertices();
+  //geom.mergeVertices();
 
   var l = geom.vertices.length;
 
@@ -102,8 +102,8 @@ Ground = function(){
                      x: v.x,
                      z: v.z,
                      ang: Math.random()*Math.PI*2,
-                     amp: 5 + Math.random() * 30,
-                     speed: 0.032 + Math.random() * 0.062
+                     amp: 5 + Math.random() * 15,
+                     speed: 0.016 + Math.random() * 0.062
                   });
   }
 
