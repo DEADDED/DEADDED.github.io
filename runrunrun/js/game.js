@@ -125,7 +125,7 @@ function createSea(){
 
 
 function loop(){
-
+requestAnimationFrame(loop);
   //camera.rotation.z += 0.001;
 
   //var delta = clock.getDelta();
@@ -137,7 +137,7 @@ function loop(){
         }*/
 
   renderer.render(scene, camera);
-  requestAnimationFrame(loop);
+  
 }
 
 
