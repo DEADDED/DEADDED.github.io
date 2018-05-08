@@ -208,7 +208,13 @@ function init(event){
 				} );
 	
   
- 
+ var oblGeom = new THREE.BoxGeometry(10,10,10);
+ var oblMat = new THREE.MeshPhongMaterial({
+	 color: 0xffffff,
+	 flatShading: true});
+  var obl = new THREE.Mesh(oblGeom, oblMat);
+  obl.position.y = 180;
+ scene.add(obl);
   loop();
 }
 var fPos, oldPos;
