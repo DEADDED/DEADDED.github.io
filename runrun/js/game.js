@@ -1,7 +1,7 @@
 
 var scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
-    renderer, container, clock, mixer;
+    renderer, container, clock, mixer,obl;
 
 var flamingo;
 
@@ -216,7 +216,7 @@ function init(event){
  var oblMat = new THREE.MeshPhongMaterial({
 	 color: 0xffffff,
 	 flatShading: true});
-  var obl = new THREE.Mesh(oblGeom, oblMat);
+  obl = new THREE.Mesh(oblGeom, oblMat);
   obl.position.y = 180;
   obl.position.z = 80;
   
