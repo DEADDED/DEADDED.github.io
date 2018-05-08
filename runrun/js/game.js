@@ -154,7 +154,7 @@ function createGround(){
 Cloud = function(){
   this.mesh = new THREE.Object3D();
  var geom = new THREE.BoxGeometry(15,15,15);
-	geom.applyMatrix(new THREE.Matrix4().makeRotationX(-Math.PI/2));
+	
  var mat = new THREE.MeshPhongMaterial({
  	color: 0xffffff});
 
@@ -180,7 +180,7 @@ Cloud = function(){
 	 this.mesh.add(m)
  }
 	
-	
+	this.mesh.rotateX(Math.PI / 2);
 }
 
 
