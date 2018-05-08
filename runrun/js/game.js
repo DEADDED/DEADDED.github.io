@@ -163,7 +163,7 @@ Cloud = function(){
  {
 	 var m = new THREE.Mesh(geom, mat);
 	 
-	 m.position.x = i*15;
+	 m.position.x = i*5;
 	 m.position.y = Math.random()*10;
 	 m.position.z = Math.random()*10;
 	 
