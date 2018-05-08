@@ -253,7 +253,7 @@ function init(event){
   cloud.position.y = -750;
   cloud.position.z = -400;
   
- scene.add(cloud);
+ scene.add(cloud.mesh);
   loop();
 }
 var fPos, oldPos;
