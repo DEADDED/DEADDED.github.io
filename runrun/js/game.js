@@ -254,7 +254,7 @@ function init(event){
 	cloud = new Cloud();
   //cloud.mesh.position.y = -750;
   //cloud.mesh.position.z = -400;
-	cloud.mesh.rotation.  
+
   
  scene.add(cloud.mesh);
   loop();
