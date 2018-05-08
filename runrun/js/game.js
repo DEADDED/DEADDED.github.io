@@ -171,7 +171,7 @@ Cloud = function(){
 	 m.rotation.z = Math.random() * Math.PI * 2;
 	 m.rotation.y = Math.random() * Math.PI * 2;
 	 
-	 var s = 0.5 + Math.random() * 0.5;
+	 var s = 0.3 + Math.random() * 0.7;
 	 m.scale.set(s,s,s);
 	 
 	 m.castShadow = true;
@@ -180,7 +180,7 @@ Cloud = function(){
 	 this.mesh.add(m)
  }
 	
-	this.mesh.rotateZ(Math.PI / 2);
+	this.mesh.rotateZ(Math.PI / 4);
 }
 
 
