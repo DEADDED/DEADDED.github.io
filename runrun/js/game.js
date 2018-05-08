@@ -180,7 +180,7 @@ Cloud = function(){
 	 this.mesh.add(m)
  }
 	
-	this.mesh.rotateX(Math.PI / 2);
+	this.mesh.rotateZ(Math.PI / 2);
 }
 
 
