@@ -9,6 +9,8 @@ var HEIGHT, WIDTH;
 
 var ground;
 
+clock = new THREE.Clock();
+
 
 function createScene() {
 
@@ -165,6 +167,8 @@ function loop(){
 	ground.moveWaves();
   ground.mesh.rotation.x += 0.005;
 	updateFlamingo();	
+	obl.position.z = Math.cos(clock.elapsedTime);
+	obl.position.y = Math.sin(clock.elapsedTime);
   renderer.clear();
   renderer.render(scene, camera);
   
@@ -179,7 +183,7 @@ function init(event){
   createScene();
   createLights();
   createGround();
-  clock = new THREE.Clock();
+  //clock = new THREE.Clock();
 
   //mixer = new THREE.AnimationMixer( scene );
 
@@ -214,6 +218,8 @@ function init(event){
 	 flatShading: true});
   var obl = new THREE.Mesh(oblGeom, oblMat);
   obl.position.y = 180;
+  obl.position.z = 80;
+  
  scene.add(obl);
   loop();
 }
