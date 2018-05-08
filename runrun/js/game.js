@@ -217,8 +217,8 @@ function init(event){
 	 color: 0xffffff,
 	 flatShading: true});
   obl = new THREE.Mesh(oblGeom, oblMat);
-  obl.position.y = 180;
-  obl.position.z = 80;
+  obl.position.y = -750;
+  obl.position.z = -400;
   
  scene.add(obl);
   loop();
