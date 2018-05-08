@@ -154,6 +154,7 @@ function createGround(){
 Cloud = function(){
   this.mesh = new THREE.Object3D();
  var geom = new THREE.BoxGeometry(15,15,15);
+	geom.applyMatrix(new THREE.Matrix4().makeRotationX(-Math.PI/2));
  var mat = new THREE.MeshPhongMaterial({
  	color: 0xffffff});
 
@@ -163,7 +164,7 @@ Cloud = function(){
  {
 	 var m = new THREE.Mesh(geom, mat);
 	 
-	 m.position.x = i*5;
+	 m.position.x = i*5 + Math.floor(Math.random() * 5);
 	 m.position.y = Math.random()*10;
 	 m.position.z = Math.random()*10;
 	 
@@ -178,6 +179,7 @@ Cloud = function(){
 	 
 	 this.mesh.add(m)
  }
+	
 	
 }
 
@@ -250,8 +252,9 @@ function init(event){
 	 flatShading: true});
   cloud = new THREE.Mesh(cloudGeom, cloudMat);*/
 	cloud = new Cloud();
-  cloud.mesh.position.y = -750;
-  cloud.mesh.position.z = -400;
+  //cloud.mesh.position.y = -750;
+  //cloud.mesh.position.z = -400;
+	cloud.mesh.rotation.  
   
  scene.add(cloud.mesh);
   loop();
