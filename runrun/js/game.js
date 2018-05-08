@@ -252,8 +252,8 @@ function init(event){
 	 flatShading: true});
   cloud = new THREE.Mesh(cloudGeom, cloudMat);*/
 	cloud = new Cloud();
-  //cloud.mesh.position.y = -750;
-  //cloud.mesh.position.z = -400;
+  cloud.mesh.position.y = -750;
+  cloud.mesh.position.z = -400;
 
   
  scene.add(cloud.mesh);
