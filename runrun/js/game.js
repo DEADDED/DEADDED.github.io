@@ -1,13 +1,14 @@
 
 var scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
-    renderer, container, clock, mixer,obl;
+    renderer, container, clock, mixer, cloud;
 
 var flamingo;
 
 var HEIGHT, WIDTH;
 
 var ground;
+
 
 clock = new THREE.Clock();
 
@@ -150,6 +151,35 @@ function createGround(){
 }
 
 
+Cloud = function(){
+  this.mesh = new THREE.Object3D();
+ var geom = new THREE.BoxGeometry(15,15,15);
+ var mat = new THREE.MeshPhongMaterial({
+ 	color: 0xffffff});
+
+ var blocksCount = 3 + Math.floor( Math.random()*3);
+	
+ for(var i = 0; i < blocksCount; i++)
+ {
+	 var m = new THREE.Mesh(geom, mat);
+	 
+	 m.position.x = i*15;
+	 m.position.y = Math.random()*10;
+	 m.position.z = Math.random()*10;
+	 
+	 m.rotation.z = Math.random() * Math.PI * 2;
+	 m.rotation.y = Math.random() * Math.PI * 2;
+	 
+	 var s = 0.1 + Math.random() * 0.9;
+	 m.scale.set(s,s,s);
+	 
+	 m.castShadow = true;
+	 m.receiveShadow = true;
+	 
+	 this.mesh.add(m)
+ }
+	
+}
 
 
 
@@ -169,8 +199,8 @@ function loop(){
 	ground.moveWaves();
   ground.mesh.rotation.x += 0.005;
 	updateFlamingo();	
-	obl.position.z = -Math.cos(clock.elapsedTime) * 1046;
-	obl.position.y = Math.sin(clock.elapsedTime) * 1046;
+	cloud.position.z = -Math.cos(clock.elapsedTime) * 1046;
+	cloud.position.y = Math.sin(clock.elapsedTime) * 1046;
   renderer.clear();
   renderer.render(scene, camera);
   
@@ -214,15 +244,16 @@ function init(event){
 				} );
 	
   
- var oblGeom = new THREE.BoxGeometry(10,10,10);
- var oblMat = new THREE.MeshPhongMaterial({
+ /*var cloudGeom = new THREE.BoxGeometry(10,10,10);
+ var cloudMat = new THREE.MeshPhongMaterial({
 	 color: 0xffffff,
 	 flatShading: true});
-  obl = new THREE.Mesh(oblGeom, oblMat);
-  obl.position.y = -750;
-  obl.position.z = -400;
+  cloud = new THREE.Mesh(cloudGeom, cloudMat);*/
+	cloud = new Cloud();
+  cloud.position.y = -750;
+  cloud.position.z = -400;
   
- scene.add(obl);
+ scene.add(cloud);
   loop();
 }
 var fPos, oldPos;
@@ -243,8 +274,8 @@ function updateFlamingo(){
   flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
 	//alert(flaPos);
 	//treePos.distanceTo(heroSphere.position)
-  console.log(flaPos.distanceTo(obl.position));
-	if(flaPos.distanceTo(obl.position) < 5)
+  console.log(flaPos.distanceTo(cloud.position));
+	if(flaPos.distanceTo(cloud.position) < 5)
 		alert("COLLISION!!!");
 	/*if(oldPos < fPos)
 		flamingo.rotation.z += 0.03;
