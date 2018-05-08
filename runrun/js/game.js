@@ -158,7 +158,7 @@ Cloud = function(){
  var mat = new THREE.MeshPhongMaterial({
  	color: 0xffffff});
 
- var blocksCount = 3 + Math.floor( Math.random()*3);
+ var blocksCount = 5 + Math.floor( Math.random()*3);
 	
  for(var i = 0; i < blocksCount; i++)
  {
@@ -171,7 +171,7 @@ Cloud = function(){
 	 m.rotation.z = Math.random() * Math.PI * 2;
 	 m.rotation.y = Math.random() * Math.PI * 2;
 	 
-	 var s = 0.1 + Math.random() * 0.9;
+	 var s = 0.5 + Math.random() * 0.5;
 	 m.scale.set(s,s,s);
 	 
 	 m.castShadow = true;
