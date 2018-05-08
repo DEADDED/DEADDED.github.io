@@ -182,6 +182,7 @@ Cloud = function(){
 	var rand = 0 - 0.5 + Math.random() * (6 - 0 + 1)
     	rand = Math.round(rand);
 	this.mesh.rotateZ((Math.PI / 6) * rand);
+	this.mesh.position.x = -200;
 }
 
 
