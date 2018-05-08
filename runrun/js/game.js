@@ -30,8 +30,9 @@ function createScene() {
     );
   scene.fog = new THREE.Fog(0xd96784, 100,950);
   camera.position.x = 0;
-  camera.position.z = 200;
-  camera.position.y = 200;
+  camera.position.y = 950;
+  camera.position.z = 600;
+  
   
   //camera.rotation.z = Math.PI / 2;
  
@@ -141,8 +142,9 @@ Ground.prototype.moveWaves = function(){
 function createGround(){
   ground = new Ground();
 
-  ground.mesh.position.y = -750;
-  ground.mesh.position.z = -400;
+  ground.mesh.position.x = 0;
+  ground.mesh.position.y = 0;
+  ground.mesh.position.z = 0;
 
   scene.add(ground.mesh);
 }
@@ -199,8 +201,8 @@ function init(event){
           flamingo = new THREE.Mesh(geometry, material);
 	  
           flamingo.position.x = 0;
-          flamingo.position.y = 180;
-	  flamingo.position.z = 80;
+          flamingo.position.y = 930;
+	  flamingo.position.z = 480;
           flamingo.scale.set(.3,.3,.3);
 	  flamingo.rotateY(Math.PI);
 
