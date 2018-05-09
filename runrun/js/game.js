@@ -312,7 +312,7 @@ function updateFlamingo(){
 	//alert(flaPos);
 	//treePos.distanceTo(heroSphere.position)
   console.log(flaPos.distanceTo(cloud.mesh.position));
-	if(flaPos.distanceTo(cloud.mesh.position) < 5)
+	if(flaPos.distanceTo(cloud.mesh.position) < 10)
 		alert("COLLISION!!!");
 	/*if(oldPos < fPos)
 		flamingo.rotation.z += 0.03;
