@@ -116,7 +116,7 @@ Ground = function(){
                      z: v.z,
                      ang: Math.random()*Math.PI*2,
                      amp: 5 + Math.random() * 15,
-                     speed: 0.016 + Math.random() * 0.062
+                     speed: 0.016 + Math.random() * 0.042
                   });
   }
 
