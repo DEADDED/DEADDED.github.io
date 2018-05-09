@@ -16,7 +16,7 @@ var cloudH = 1046;
 
 var sideClouds;
 
-var sideCloudsCount = 10;
+var sideCloudsCount = 12;
 angle = 2 * Math.PI / sideCloudsCount;
 
 clock = new THREE.Clock();
