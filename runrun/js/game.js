@@ -215,7 +215,7 @@ SideClouds = function(){
 	{
 		var c = new Cloud();
 		
-		var a = (2 * angle - 1) * i;
+		var a = (2 * angle * i) - angle;
 		
 		c.mesh.position.z = Math.cos(a) * cloudH;
 		c.mesh.position.y = Math.sin(a) * cloudH;
