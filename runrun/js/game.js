@@ -9,6 +9,16 @@ var HEIGHT, WIDTH;
 
 var ground;
 
+var lCloudsPos = -160;
+var rCloudsPos = - lCloudsPos;
+
+var cloudH = 1046;
+
+var sideClouds;
+
+var lSideCloudsCount = 20;
+var rSIdeCloudsCount = lSideCludsCount - 1;
+angle = 2 * Math.PI / lSideCloudsCount;
 
 clock = new THREE.Clock();
 
@@ -182,11 +192,30 @@ Cloud = function(){
 	var rand = 0 - 0.5 + Math.random() * (6 - 0 + 1)
     	rand = Math.round(rand);
 	this.mesh.rotateZ((Math.PI / 6) * rand);
-	this.mesh.position.x = -150;
+	//this.mesh.position.x = -150;
 }
 
-
-
+SideClouds = function(){
+	
+	this.mesh = new THREE.Object3D();
+	
+	for(var i = 0; i < lSideCloudsCount; i++)
+	{
+		var c = new Cloud();
+		
+		var a = 2 * angle * i;
+		
+		c.mesh.position.z = Math.cos(a) * cloudH;
+		c.mesh.position.y = Math.sin(a) * cloudH;
+		c.mesh.position.x = lCloudsPos;
+		
+		this.mesh.add(c.mesh);
+	}
+}
+function createSideClouds(){
+	sideClouds = new SideClouds();
+	scene.add(sideClouds.mesh);
+}
 function loop(){
    //updateFlamingo();	
 	
@@ -205,6 +234,8 @@ function loop(){
 	updateFlamingo();	
 	cloud.mesh.position.z = -Math.cos(clock.elapsedTime) * 1046;
 	cloud.mesh.position.y = Math.sin(clock.elapsedTime) * 1046;
+	
+	sideCluds.mesh.rotation.x += 0.007;
   renderer.clear();
   renderer.render(scene, camera);
   
@@ -219,6 +250,7 @@ function init(event){
   createScene();
   createLights();
   createGround();
+  createSideCluds();
   //clock = new THREE.Clock();
 
   //mixer = new THREE.AnimationMixer( scene );
