@@ -235,7 +235,7 @@ function loop(){
 	cloud.mesh.position.z = -Math.cos(clock.elapsedTime) * 1046;
 	cloud.mesh.position.y = Math.sin(clock.elapsedTime) * 1046;
 	
-	sideCluds.mesh.rotation.x += 0.007;
+	sideClouds.mesh.rotation.x += 0.007;
   renderer.clear();
   renderer.render(scene, camera);
   
