@@ -16,7 +16,9 @@ var cloudH = 1046;
 
 var sideClouds;
 
-var clouds = []
+var clouds = [];
+
+var row;
 
 var sideCloudsCount = 12;
 angle = 2 * Math.PI / sideCloudsCount;
@@ -233,9 +235,41 @@ function createSideClouds(){
 
 
 
+cloudRow = function(){
+	
+  this.clouds = 0;
+  this.addOrNot = 0;
 
+  this.mesh = new THREE.Object3D();
+	
+  for(var i = 0; i < 3; i++)
+  {
+	  if(this.clouds < 2)
+	  {
+		  var c = new Cloud();
+		  
+		  c.position.x = -70 + 70 * i;
+		  
+		  this.mesh.add(c);
+		  this.clouds += 1;
+		  
+		  clouds.push(c);
+		  
+	  }
+	  else break;
+  }
+}
 
+cloudRow.prototype.Remove = function(){
+	clouds.splice(0, this.clouds);
+	
+	scene.remove(this.mesh);
+}
 
+function createRow(){
+	row = new cloudRow;
+	scene.add(row.mesh);
+}
 
 
 
@@ -256,8 +290,8 @@ function loop(){
 	ground.moveWaves();
   ground.mesh.rotation.x += 0.005;
 	updateFlamingo();	
-	//cloud.mesh.position.z = -Math.cos(clock.elapsedTime/2) * 1046;
-	//cloud.mesh.position.y = Math.sin(clock.elapsedTime/2) * 1046;
+	row.mesh.position.z = -Math.cos(clock.elapsedTime/2) * 1046;
+	row.mesh.position.y = Math.sin(clock.elapsedTime/2) * 1046;
 	
 	sideClouds.mesh.rotation.x += 0.007;
   renderer.clear();
