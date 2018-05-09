@@ -250,7 +250,7 @@ function init(event){
   createScene();
   createLights();
   createGround();
-  createSideCluds();
+  createSideClouds();
   //clock = new THREE.Clock();
 
   //mixer = new THREE.AnimationMixer( scene );
