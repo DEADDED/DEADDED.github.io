@@ -302,7 +302,7 @@ function init(event){
   //cloud.mesh.position.z = -400;
 
   
- scene.add(cloud.mesh);
+ //scene.add(cloud.mesh);
   loop();
 }
 var fPos, oldPos;
