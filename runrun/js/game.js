@@ -248,9 +248,9 @@ cloudRow = function(){
 	  {
 		  var c = new Cloud();
 		  
-		  c.position.x = -70 + 70 * i;
+		  c.mesh.position.x = -70 + 70 * i;
 		  
-		  this.mesh.add(c);
+		  this.mesh.add(c.mesh);
 		  this.clouds += 1;
 		  
 		  clouds.push(c);
