@@ -232,8 +232,8 @@ function loop(){
 	ground.moveWaves();
   ground.mesh.rotation.x += 0.005;
 	updateFlamingo();	
-	cloud.mesh.position.z = -Math.cos(clock.elapsedTime) * 1046;
-	cloud.mesh.position.y = Math.sin(clock.elapsedTime) * 1046;
+	cloud.mesh.position.z = -Math.cos(clock.elapsedTime/2) * 1046;
+	cloud.mesh.position.y = Math.sin(clock.elapsedTime/2) * 1046;
 	
 	sideClouds.mesh.rotation.x += 0.007;
   renderer.clear();
