@@ -244,8 +244,8 @@ function loop(){
 	ground.moveWaves();
   ground.mesh.rotation.x += 0.005;
 	updateFlamingo();	
-	cloud.mesh.position.z = -Math.cos(clock.elapsedTime/2) * 1046;
-	cloud.mesh.position.y = Math.sin(clock.elapsedTime/2) * 1046;
+	//cloud.mesh.position.z = -Math.cos(clock.elapsedTime/2) * 1046;
+	//cloud.mesh.position.y = Math.sin(clock.elapsedTime/2) * 1046;
 	
 	sideClouds.mesh.rotation.x += 0.007;
   renderer.clear();
@@ -297,9 +297,9 @@ function init(event){
 	 color: 0xffffff,
 	 flatShading: true});
   cloud = new THREE.Mesh(cloudGeom, cloudMat);*/
-	cloud = new Cloud();
-  cloud.mesh.position.y = -750;
-  cloud.mesh.position.z = -400;
+	//cloud = new Cloud();
+  //cloud.mesh.position.y = -750;
+  //cloud.mesh.position.z = -400;
 
   
  scene.add(cloud.mesh);
