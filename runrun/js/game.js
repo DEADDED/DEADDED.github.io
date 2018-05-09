@@ -16,6 +16,8 @@ var cloudH = 1046;
 
 var sideClouds;
 
+var clouds = []
+
 var sideCloudsCount = 12;
 angle = 2 * Math.PI / sideCloudsCount;
 
@@ -228,6 +230,16 @@ function createSideClouds(){
 	sideClouds = new SideClouds();
 	scene.add(sideClouds.mesh);
 }
+
+
+
+
+
+
+
+
+
+
 function loop(){
    //updateFlamingo();	
 	
