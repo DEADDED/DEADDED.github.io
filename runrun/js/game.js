@@ -16,9 +16,8 @@ var cloudH = 1046;
 
 var sideClouds;
 
-var lSideCloudsCount = 20;
-var rSIdeCloudsCount = lSideCloudsCount - 1;
-angle = 2 * Math.PI / lSideCloudsCount;
+var sideCloudsCount = 20;
+angle = 2 * Math.PI / sideCloudsCount;
 
 clock = new THREE.Clock();
 
@@ -199,7 +198,7 @@ SideClouds = function(){
 	
 	this.mesh = new THREE.Object3D();
 	
-	for(var i = 0; i < lSideCloudsCount; i++)
+	for(var i = 0; i < sideCloudsCount; i++)
 	{
 		var c = new Cloud();
 		
@@ -208,6 +207,19 @@ SideClouds = function(){
 		c.mesh.position.z = Math.cos(a) * cloudH;
 		c.mesh.position.y = Math.sin(a) * cloudH;
 		c.mesh.position.x = lCloudsPos;
+		
+		this.mesh.add(c.mesh);
+	}
+	
+	for(var i = 0; i  < sideCloudsCount; i++)
+	{
+		var c = new Cloud();
+		
+		var a = (2 * angle - 1) * i;
+		
+		c.mesh.position.z = Math.cos(a) * cloudH;
+		c.mesh.position.y = Math.sin(a) * cloudH;
+		c.mesh.position.x = rCloudsPos;
 		
 		this.mesh.add(c.mesh);
 	}
