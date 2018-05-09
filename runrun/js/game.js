@@ -9,7 +9,7 @@ var HEIGHT, WIDTH;
 
 var ground;
 
-var lCloudsPos = -160;
+var lCloudsPos = -200;
 var rCloudsPos = - lCloudsPos;
 
 var cloudH = 1046;
