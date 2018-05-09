@@ -247,7 +247,7 @@ function loop(){
   //camera.rotation.z += 0.001;
 
   var delta = clock.getDelta();
-  mixer.update(delta);
+  //mixer.update(delta);
 				/*for ( var i = 0; i < mixers.length; i ++ ) {
 					mixers[ i ].update( delta );
 				}*/
