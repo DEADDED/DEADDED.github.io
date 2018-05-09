@@ -246,15 +246,17 @@ cloudRow = function(){
   {
 	  if(this.clouds < 2)
 	  {
-		  var c = new Cloud();
+		  addOrNot = Math.random();
+		  if(addOrNot > 0.5){
+		  	var c = new Cloud();
 		  
-		  c.mesh.position.x = -70 + 70 * i;
+		  	c.mesh.position.x = -70 + 70 * i;
 		  
-		  this.mesh.add(c.mesh);
-		  this.clouds += 1;
+		  	this.mesh.add(c.mesh);
+		  	this.clouds += 1;
 		  
-		  clouds.push(c);
-		  
+		  	clouds.push(c);
+		  }
 	  }
 	  else break;
   }
