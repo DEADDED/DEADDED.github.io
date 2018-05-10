@@ -248,10 +248,17 @@ cloudRow = function(){
 	
 }
 
-cloudRow.prototype.Remove = function(){
-	this.clouds.splice(0, this.clouds.length);
+cloudRow.prototype.removeRow = function(){
+	this.clouds.splice(0);
 	
 	scene.remove(this.mesh);
+}
+
+cloudRow.prototype.removeClouds = function(){
+	for(var i = 0; i < this.clouds.length; i++){
+		this.mesh.remove(this.clouds[i].mesh);
+	}
+	this.clouds.splice(0);
 }
 
 cloudRow.prototype.addClouds = function(){
@@ -300,6 +307,13 @@ function loop(){
 	sideClouds.mesh.rotation.x += 0.007;
 	
 	Sky.rotation.x += 0.009;
+	
+	for(var i = 0; i < 4; i++){
+		if(cloudRows[i].mesh.position.z / cloudH > Math.cos(Math.PI / 4))
+		{
+			
+		}
+	}
 	
   renderer.clear();
   renderer.render(scene, camera);
