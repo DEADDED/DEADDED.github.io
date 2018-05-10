@@ -259,6 +259,7 @@ cloudRow.prototype.removeClouds = function(){
 		this.mesh.remove(this.clouds[i].mesh);
 	}
 	this.clouds.splice(0);
+	renderer.render();
 }
 
 cloudRow.prototype.addClouds = function(){
