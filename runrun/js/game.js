@@ -22,6 +22,8 @@ var row;
 
 var cloudRows = [];
 
+var targetVector = new THREE.Vector3();
+
 var Sky = new THREE.Object3D();
 
 var sideCloudsCount = 12;
