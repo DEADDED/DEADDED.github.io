@@ -325,6 +325,7 @@ function init(event){
 	  Sky.add(cloudRows[i].mesh);
 	  
   }
+	scene.add(Sky);
 	
   //clock = new THREE.Clock();
 
