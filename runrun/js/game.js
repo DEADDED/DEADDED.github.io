@@ -312,7 +312,7 @@ function loop(){
 	Sky.rotation.x += 0.009;
 	
 	for(var i = 0; i < 4; i++){
-		if(cloudRows[i].mesh.position.z / cloudH > Math.cos(Math.PI / 4))
+		if(cloudRows[i].mesh.position.z >  cloudH / 2)
 		{
 			console.log("gone");
 			cloudRows[i].removeClouds();
