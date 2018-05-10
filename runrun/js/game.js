@@ -246,7 +246,16 @@ cloudRow = function(){
 
   this.mesh = new THREE.Object3D();
 	
-  for(var i = 0; i < 3; i++)
+}
+
+cloudRow.prototype.Remove = function(){
+	this.clouds.splice(0, this.clouds.length);
+	
+	scene.remove(this.mesh);
+}
+
+cloudRow.prototype.addClouds(){
+	for(var i = 0; i < 3; i++)
   {
 	  if(this.clouds.length < 2)
 	  {
@@ -265,13 +274,6 @@ cloudRow = function(){
 	  else break;
   }
 }
-
-cloudRow.prototype.Remove = function(){
-	this.clouds.splice(0, this.clouds.length);
-	
-	scene.remove(this.mesh);
-}
-
 
 
 
@@ -318,6 +320,8 @@ function init(event){
 	
   for(var i = 0; i < 4; i++){
 	  cloudRows[i] = new cloudRow();
+	  
+	  cloudRows[i].addClouds();
 	  
 	  cloudRows[i].mesh.position.z = cloudH * Math.cos(90 + Math.PI/12 * i);
 	  cloudRows[i].mesh.position.y = cloudH * Math.sin(90 + Math.PI/12 * i);
