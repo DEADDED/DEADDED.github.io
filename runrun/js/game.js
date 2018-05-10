@@ -319,8 +319,8 @@ function init(event){
   for(var i = 0; i < 4; i++){
 	  cloudRows[i] = new cloudRow();
 	  
-	  cloudRow[i].mesh.position.z = cloudH * Math.cos(90 + Math.PI/12 * i);
-	  cloudRow[i].mesh.position.y = cloudH * Math.sin(90 + Math.PI/12 * i);
+	  cloudRows[i].mesh.position.z = cloudH * Math.cos(90 + Math.PI/12 * i);
+	  cloudRows[i].mesh.position.y = cloudH * Math.sin(90 + Math.PI/12 * i);
 	  
 	  Sky.add(cloudRows[i].mesh);
 	  
