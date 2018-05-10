@@ -20,6 +20,10 @@ var clouds = [];
 
 var row;
 
+var cloudRows = [];
+
+var Sky = new THREE.Object3D();
+
 var sideCloudsCount = 12;
 angle = 2 * Math.PI / sideCloudsCount;
 
@@ -268,10 +272,6 @@ cloudRow.prototype.Remove = function(){
 	scene.remove(this.mesh);
 }
 
-function createRow(){
-	row = new cloudRow;
-	scene.add(row.mesh);
-}
 
 
 
@@ -292,10 +292,13 @@ function loop(){
 	ground.moveWaves();
   ground.mesh.rotation.x += 0.005;
 	updateFlamingo();	
-	row.mesh.position.z = -Math.cos(clock.elapsedTime/2) * 1046;
-	row.mesh.position.y = Math.sin(clock.elapsedTime/2) * 1046;
+	//row.mesh.position.z = -Math.cos(clock.elapsedTime/2) * 1046;
+	//row.mesh.position.y = Math.sin(clock.elapsedTime/2) * 1046;
 	
 	sideClouds.mesh.rotation.x += 0.007;
+	
+	Sky.rotation.x += 0.009;
+	
   renderer.clear();
   renderer.render(scene, camera);
   
@@ -311,7 +314,18 @@ function init(event){
   createLights();
   createGround();
   createSideClouds();
-  createRow();
+  //createRow();
+	
+  for(var i = 0; i < 4; i++){
+	  cloudRows[i] = new cloudRow();
+	  
+	  cloudRow[i].mesh.position.z = cloudH * Math.cos(90 + Math.PI/12 * i);
+	  cloudRow[i].mesh.position.y = cloudH * Math.sin(90 + Math.PI/12 * i);
+	  
+	  Sky.add(cloudRows[i].mesh);
+	  
+  }
+	
   //clock = new THREE.Clock();
 
   //mixer = new THREE.AnimationMixer( scene );
