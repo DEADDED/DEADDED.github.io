@@ -315,7 +315,8 @@ function loop(){
 	
 	
 	for(var i = 0; i < 4; i++){
-		console.log(cloudRows[i].mesh.position.z);
+		cloudRows[i].mesh.getWorldPosition(targetVector);
+		console.log(targetVector.z);
 		/*
 		if(cloudRows[i].mesh.position.z >  cloudH / 2)
 		{
