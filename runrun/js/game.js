@@ -237,14 +237,14 @@ function createSideClouds(){
 
 cloudRow = function(){
 	
-  this.clouds = 0;
+  this.clouds = [];
   this.addOrNot = 0;
 
   this.mesh = new THREE.Object3D();
 	
   for(var i = 0; i < 3; i++)
   {
-	  if(this.clouds < 2)
+	  if(this.clouds.length < 2)
 	  {
 		  addOrNot = Math.random();
 		  if(addOrNot > 0.5){
@@ -253,9 +253,9 @@ cloudRow = function(){
 		  	c.mesh.position.x = -70 + 70 * i;
 		  
 		  	this.mesh.add(c.mesh);
-		  	this.clouds += 1;
+		  	this.clouds.push(c);
 		  
-		  	clouds.push(c);
+		  	//clouds.push(c);
 		  }
 	  }
 	  else break;
@@ -263,7 +263,7 @@ cloudRow = function(){
 }
 
 cloudRow.prototype.Remove = function(){
-	clouds.splice(0, this.clouds);
+	this.clouds.splice(0, this.clouds.length);
 	
 	scene.remove(this.mesh);
 }
