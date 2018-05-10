@@ -314,6 +314,7 @@ function loop(){
 	for(var i = 0; i < 4; i++){
 		if(cloudRows[i].mesh.position.z / cloudH > Math.cos(Math.PI / 4))
 		{
+			console.log("gone");
 			cloudRows[i].removeClouds();
 			cloudRows[i].addClouds();
 			cloudRows[i].mesh.position.z = cloudH * Math.cos(7 * Math.PI/12);
