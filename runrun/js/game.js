@@ -362,10 +362,10 @@ function updateFlamingo(){
 	flamingo.position.x += fPos;
 		
 		//flamingo.rotation.z += fPos/300;
-	if(flamingo.position.x > 400)
-		flamingo.position.x = 400;
-	else if(flamingo.position.x < -400)
-		flamingo.position.x = -400;
+	if(flamingo.position.x > 100)
+		flamingo.position.x = 100;
+	else if(flamingo.position.x < -100)
+		flamingo.position.x = -100;
 	
 	
 	 var flaPos = new THREE.Vector3();
