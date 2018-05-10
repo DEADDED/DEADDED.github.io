@@ -311,7 +311,10 @@ function loop(){
 	
 	Sky.rotation.x += 0.009;
 	
+	
 	for(var i = 0; i < 4; i++){
+		console.log(cloudRows[i].mesh.position.z);
+		/*
 		if(cloudRows[i].mesh.position.z >  cloudH / 2)
 		{
 			console.log("gone");
@@ -320,7 +323,9 @@ function loop(){
 			cloudRows[i].mesh.position.z = cloudH * Math.cos(7 * Math.PI/12);
 			cloudRows[i].mesh.position.y = cloudH * Math.sin(7 * Math.PI/12);
 		}
+		*/
 	}
+	
 	
   renderer.clear();
   renderer.render(scene, camera);
