@@ -318,7 +318,7 @@ function loop(){
 		cloudRows[i].mesh.getWorldPosition(targetVector);
 		console.log(targetVector.z);
 		
-		if(targetVector.z >  cloudH / 2 + 200)
+		/*if(targetVector.z >  cloudH / 2 + 200)
 		{
 			console.log("gone");
 			cloudRows[i].removeClouds();
@@ -326,7 +326,7 @@ function loop(){
 			cloudRows[i].mesh.position.z = cloudH * Math.cos(7 * Math.PI/12);
 			cloudRows[i].mesh.position.y = cloudH * Math.sin(7 * Math.PI/12);
 		}
-		
+		*/
 	}
 	
 	
