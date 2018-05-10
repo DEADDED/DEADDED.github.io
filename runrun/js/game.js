@@ -261,6 +261,7 @@ cloudRow.prototype.removeClouds = function(){
 	}
 	this.clouds.splice(0);
 	//renderer.render();
+	console.log("remove");
 }
 
 cloudRow.prototype.addClouds = function(){
