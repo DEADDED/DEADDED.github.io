@@ -254,7 +254,7 @@ cloudRow.prototype.Remove = function(){
 	scene.remove(this.mesh);
 }
 
-cloudRow.prototype.addClouds(){
+cloudRow.prototype.addClouds = function(){
 	for(var i = 0; i < 3; i++)
   {
 	  if(this.clouds.length < 2)
