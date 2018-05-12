@@ -329,7 +329,7 @@ function loop(){
 		cloudRows[i].mesh.position.z = cloudH * Math.cos(cloudRows[i].rot + rotUpdate);
 		cloudRows[i].mesh.position.y = -cloudH * Math.cos(cloudRows[i].rot + rotUpdate);
 		
-		console.log(cloudRows[i].mesh.position.z,"  ", cloudRows[i].mesh.position.z);
+		console.log(cloudRows[i].mesh.position.z,"  ", cloudRows[i].mesh.position.y);
 		/*if(targetVector.z > 500 &&  targetVector.y > 0)
 		{
 			Sky.remove(cloudRows[i].mesh);
