@@ -14,6 +14,9 @@ var rCloudsPos = - lCloudsPos;
 
 var cloudH = 1046;
 
+var globalRot = 10;
+var rotUpdate = 0;
+
 var sideClouds;
 
 var clouds = [];
@@ -246,6 +249,8 @@ cloudRow = function(){
   this.clouds = [];
   this.addOrNot = 0;
 
+  this.rot = 0;
+	
   this.mesh = new THREE.Object3D();
 	
 }
@@ -311,15 +316,18 @@ function loop(){
 	
 	sideClouds.mesh.rotation.x += 0.007;
 	
-	Sky.rotation.x += 0.009;
+	//Sky.rotation.x += 0.009;
 	
-	
+	rotUpdate += 0.01;
 	for(var i = 0; i < 4; i++){
 		
 		/*cloudRows[i].mesh.position.z = cloudH * Math.cos(clock.elapsedTime);
   		cloudRows[i].mesh.position.y = - cloudH * Math.sin(clock.elapsedTime);*/
 		cloudRows[i].mesh.getWorldPosition(targetVector);
 		cloudRows[i].mesh.rotation.x += 0.009;
+		
+		cloudRows[i].mesh.position.z = cloudH * Math.cos(cloudRows[i].rot + rotUpdate);
+		cloudRows[i].mesh.position.y = -cloudH * Math.cos(cloudRows[i].rot + rotUpdate);
 		/*if(targetVector.z > 500 &&  targetVector.y > 0)
 		{
 			Sky.remove(cloudRows[i].mesh);
@@ -372,15 +380,16 @@ function init(event){
 	  
 	  cloudRows[i].addClouds();
 	  
-	  cloudRows[i].mesh.position.z = cloudH * Math.cos(Math.PI/2 + Math.PI/12 * i);
+	  cloudRows[i].mesh.position.z = -cloudH * Math.cos(Math.PI/2 + Math.PI/12 * i);
 	  cloudRows[i].mesh.position.y = cloudH * Math.sin(Math.PI/2 + Math.PI/12 * i);
+	  cloudRows[i].rot = globalRot * i;
 	  
-	  //scene.add(cloudRows[i].mesh);
+	  scene.add(cloudRows[i].mesh);
 	  
-	  Sky.add(cloudRows[i].mesh);
+	  //Sky.add(cloudRows[i].mesh);
 	  
   }
-	scene.add(Sky);
+	//scene.add(Sky);
 	
   //clock = new THREE.Clock();
 
