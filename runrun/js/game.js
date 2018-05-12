@@ -316,7 +316,8 @@ function loop(){
 	
 	for(var i = 0; i < 4; i++){
 		cloudRows[i].mesh.getWorldPosition(targetVector);
-		//console.log(targetVector.z);
+		if(targetVector.z > 600(
+		   console.log("gone");
 		
 		/*if(targetVector.z >  cloudH / 2 + 200)
 		{
