@@ -318,7 +318,7 @@ function loop(){
 	
 	//Sky.rotation.x += 0.009;
 	
-	rotUpdate += 0.00001;
+	//rotUpdate += 0.00001;
 	for(var i = 0; i < 4; i++){
 		
 		/*cloudRows[i].mesh.position.z = cloudH * Math.cos(clock.elapsedTime);
