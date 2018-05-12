@@ -327,10 +327,11 @@ function loop(){
 	  		cloudRows[i].mesh.position.y = cloudH * Math.sin(Math.PI/2 + Math.PI/12);
 	  
 	  		Sky.add(cloudRows[i].mesh);
+			renderer.render();
 			
 			
 		}
-		   console.log("gone");
+		   //console.log("gone");
 		
 		/*if(targetVector.z >  cloudH / 2 + 200)
 		{
