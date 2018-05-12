@@ -14,7 +14,7 @@ var rCloudsPos = - lCloudsPos;
 
 var cloudH = 1046;
 
-var globalRot = 0.5;
+var globalRot = 1.57;
 var rotUpdate = 0.008;
 
 var sideClouds;
