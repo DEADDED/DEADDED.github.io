@@ -326,8 +326,8 @@ function loop(){
 			cloudRows[i].mesh.position.z = cloudH * Math.cos(Math.PI/2 + Math.PI/12);
 	  		cloudRows[i].mesh.position.y = cloudH * Math.sin(Math.PI/2 + Math.PI/12);
 	  
-	  		Sky.add(cloudRows[i].mesh);
-			renderer.render();
+	  		//Sky.add(cloudRows[i].mesh);
+			//renderer.render();
 			
 			
 		}
