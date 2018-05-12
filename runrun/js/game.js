@@ -239,7 +239,7 @@ SideClouds = function(){
 }
 function createSideClouds(){
 	sideClouds = new SideClouds();
-	scene.add(sideClouds.mesh);
+	//scene.add(sideClouds.mesh);
 }
 
 
