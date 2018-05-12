@@ -14,7 +14,7 @@ var rCloudsPos = - lCloudsPos;
 
 var cloudH = 1046;
 
-var globalRot = 1.57;
+var globalRot = 0.785;
 var rotUpdate = 0.008;
 
 var sideClouds;
@@ -319,7 +319,7 @@ function loop(){
 	//Sky.rotation.x += 0.009;
 	
 	//rotUpdate += 0.00001;
-	for(var i = 0; i < 4; i++){
+	for(var i = 0; i < 8; i++){
 		
 		/*cloudRows[i].mesh.position.z = cloudH * Math.cos(clock.elapsedTime);
   		cloudRows[i].mesh.position.y = - cloudH * Math.sin(clock.elapsedTime);*/
@@ -391,7 +391,7 @@ function init(event){
   createSideClouds();
   //createRow();
 	
-  for(var i = 0; i < 4; i++){
+  for(var i = 0; i < 8; i++){
 	  cloudRows[i] = new cloudRow();
 	  
 	  cloudRows[i].addClouds();
