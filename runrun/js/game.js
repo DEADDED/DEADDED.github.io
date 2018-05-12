@@ -383,8 +383,8 @@ function init(event){
 	  
 	  cloudRows[i].addClouds();
 	  
-	  cloudRows[i].mesh.position.z = cloudH * Math.cos(Math.PI/2 + Math.PI/12 * i);
-	  cloudRows[i].mesh.position.y = -cloudH * Math.sin(Math.PI/2 + Math.PI/12 * i);
+	  cloudRows[i].mesh.position.z = -cloudH * Math.cos(Math.PI/2 + Math.PI/12 * i);
+	  cloudRows[i].mesh.position.y = cloudH * Math.sin(Math.PI/2 + Math.PI/12 * i);
 	  cloudRows[i].rot = globalRot * i;
 	  
 	  scene.add(cloudRows[i].mesh);
