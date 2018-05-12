@@ -14,7 +14,7 @@ var rCloudsPos = - lCloudsPos;
 
 var cloudH = 1046;
 
-var globalRot = 10;
+var globalRot = 0.5;
 var rotUpdate = 0.1;
 
 var sideClouds;
@@ -326,8 +326,9 @@ function loop(){
 		cloudRows[i].mesh.getWorldPosition(targetVector);
 		cloudRows[i].mesh.rotation.x += 0.009;
 		
-		cloudRows[i].mesh.position.z = cloudH * Math.cos(cloudRows[i].rot + rotUpdate);
-		cloudRows[i].mesh.position.y = -cloudH * Math.cos(cloudRows[i].rot + rotUpdate);
+		cloudRows[i].rot += rotUpdate;
+		cloudRows[i].mesh.position.z = cloudH * Math.cos(cloudRows[i].rot);
+		cloudRows[i].mesh.position.y = -cloudH * Math.cos(cloudRows[i].rot);
 		
 		console.log(cloudRows[i].mesh.position.z,"  ", cloudRows[i].mesh.position.y);
 		/*if(targetVector.z > 500 &&  targetVector.y > 0)
@@ -382,8 +383,8 @@ function init(event){
 	  
 	  cloudRows[i].addClouds();
 	  
-	  cloudRows[i].mesh.position.z = -cloudH * Math.cos(Math.PI/2 + Math.PI/12 * i);
-	  cloudRows[i].mesh.position.y = cloudH * Math.sin(Math.PI/2 + Math.PI/12 * i);
+	  cloudRows[i].mesh.position.z = cloudH * Math.cos(Math.PI/2 + Math.PI/12 * i);
+	  cloudRows[i].mesh.position.y = -cloudH * Math.sin(Math.PI/2 + Math.PI/12 * i);
 	  cloudRows[i].rot = globalRot * i;
 	  
 	  scene.add(cloudRows[i].mesh);
