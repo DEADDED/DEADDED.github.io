@@ -315,8 +315,11 @@ function loop(){
 	
 	
 	for(var i = 0; i < 4; i++){
+		
+		cloudRows.mesh.position.z = cloudH * Math.cos(clock.elapsedTime);
+  		cloudRows.mesh.position.y = - cloudH * Math.sin(clock.elapsedTime);
 		cloudRows[i].mesh.getWorldPosition(targetVector);
-		if(targetVector.z > 500 &&  targetVector.y > 0)
+		/*if(targetVector.z > 500 &&  targetVector.y > 0)
 		{
 			Sky.remove(cloudRows[i].mesh);
 			
@@ -331,7 +334,7 @@ function loop(){
 			//renderer.render();
 			
 			
-		}
+		}*/
 		   //console.log("gone");
 		
 		/*if(targetVector.z >  cloudH / 2 + 200)
@@ -371,10 +374,12 @@ function init(event){
 	  cloudRows[i].mesh.position.z = cloudH * Math.cos(Math.PI/2 + Math.PI/12 * i);
 	  cloudRows[i].mesh.position.y = cloudH * Math.sin(Math.PI/2 + Math.PI/12 * i);
 	  
-	  Sky.add(cloudRows[i].mesh);
+	  scene.add(cloudRows[i]);
+	  
+	  //Sky.add(cloudRows[i].mesh);
 	  
   }
-	scene.add(Sky);
+	//scene.add(Sky);
 	
   //clock = new THREE.Clock();
 
