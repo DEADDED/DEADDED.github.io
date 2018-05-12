@@ -328,7 +328,7 @@ function loop(){
 		
 		cloudRows[i].rot += rotUpdate;
 		cloudRows[i].mesh.position.z = cloudH * Math.cos(cloudRows[i].rot);
-		cloudRows[i].mesh.position.y = -cloudH * Math.cos(cloudRows[i].rot);
+		cloudRows[i].mesh.position.y = -cloudH * Math.sin(cloudRows[i].rot);
 		
 		console.log(cloudRows[i].mesh.position.z,"  ", cloudRows[i].mesh.position.y);
 		/*if(targetVector.z > 500 &&  targetVector.y > 0)
