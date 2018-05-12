@@ -326,8 +326,8 @@ function loop(){
 		cloudRows[i].mesh.getWorldPosition(targetVector);
 		cloudRows[i].mesh.rotation.x += 0.009;
 		
-		cloudRows[i].mesh.position.z += cloudH * Math.cos(cloudRows[i].rot + rotUpdate);
-		cloudRows[i].mesh.position.y += -cloudH * Math.cos(cloudRows[i].rot + rotUpdate);
+		cloudRows[i].mesh.position.z = cloudH * Math.cos(cloudRows[i].rot + rotUpdate);
+		cloudRows[i].mesh.position.y = -cloudH * Math.cos(cloudRows[i].rot + rotUpdate);
 		
 		console.log(cloudRows[i].mesh.position.z,"  ", cloudRows[i].mesh.position.y);
 		/*if(targetVector.z > 500 &&  targetVector.y > 0)
