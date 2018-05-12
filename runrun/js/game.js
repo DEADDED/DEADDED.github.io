@@ -316,7 +316,20 @@ function loop(){
 	
 	for(var i = 0; i < 4; i++){
 		cloudRows[i].mesh.getWorldPosition(targetVector);
-		if(targetVector.z > 500 && targetVector.z < 505 && targetVector.y > 0)
+		if(targetVector.z > 500 &&  targetVector.y > 0)
+		{
+			Sky.remove(cloudRows[i].mesh);
+			
+			cloudRows[i] = new cloudRow();
+			cloudRows[i].addClouds();
+			
+			cloudRows[i].mesh.position.z = cloudH * Math.cos(Math.PI/2 + Math.PI/12);
+	  		cloudRows[i].mesh.position.y = cloudH * Math.sin(Math.PI/2 + Math.PI/12);
+	  
+	  		Sky.add(cloudRows[i].mesh);
+			
+			
+		}
 		   console.log("gone");
 		
 		/*if(targetVector.z >  cloudH / 2 + 200)
