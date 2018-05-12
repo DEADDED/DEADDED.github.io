@@ -53,8 +53,8 @@ function createScene() {
     );
   scene.fog = new THREE.Fog(0xd96784, 100,950);
   camera.position.x = 0;
-  camera.position.y = 950;
-  camera.position.z = 600;
+  camera.position.y = 0;
+  camera.position.z = 1050;
   
   
   //camera.rotation.z = Math.PI / 2;
