@@ -15,7 +15,7 @@ var rCloudsPos = - lCloudsPos;
 var cloudH = 1046;
 
 var globalRot = 10;
-var rotUpdate = 0;
+var rotUpdate = 0.1;
 
 var sideClouds;
 
@@ -51,10 +51,10 @@ function createScene() {
     nearPlane,
     farPlane
     );
-  //scene.fog = new THREE.Fog(0xd96784, 100,950);
+  scene.fog = new THREE.Fog(0xd96784, 100,950);
   camera.position.x = 0;
-  camera.position.y = 0;
-  camera.position.z = 1050;
+  camera.position.y = 950;
+  camera.position.z = 600;
   
   
   //camera.rotation.z = Math.PI / 2;
@@ -169,7 +169,7 @@ function createGround(){
   ground.mesh.position.y = 0;
   ground.mesh.position.z = 0;
 
- // scene.add(ground.mesh);
+  scene.add(ground.mesh);
 }
 
 
@@ -239,7 +239,7 @@ SideClouds = function(){
 }
 function createSideClouds(){
 	sideClouds = new SideClouds();
-	//scene.add(sideClouds.mesh);
+	scene.add(sideClouds.mesh);
 }
 
 
