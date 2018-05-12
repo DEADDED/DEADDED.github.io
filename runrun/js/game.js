@@ -327,6 +327,19 @@ function loop(){
 		cloudRows[i].mesh.rotation.x += 0.009;
 		
 		cloudRows[i].rot += rotUpdate;
+		
+		if(cloudRows[i].rot >= 6.18)
+		{
+		  cloudRows[i].removeRow();
+		  cloudRows[i] = new cloudRow();
+	  
+	  	  cloudRows[i].addClouds();
+			
+		  cloudRows[i].rot = 0;
+		  scene.add(cloudRows[i].mesh);
+			
+			console.log("change");
+		}
 		cloudRows[i].mesh.position.z = cloudH * Math.cos(cloudRows[i].rot);
 		cloudRows[i].mesh.position.y = -cloudH * Math.sin(cloudRows[i].rot);
 		
