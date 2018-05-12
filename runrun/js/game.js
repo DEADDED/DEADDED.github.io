@@ -323,7 +323,7 @@ function loop(){
 			cloudRows[i] = new cloudRow();
 			cloudRows[i].addClouds();
 			
-			cloudRows[i].mesh.position.z = cloudH * Math.cos(Math.PI/2 + Math.PI/12);
+			cloudRows[i].mesh.position.z = targetVector.z - 500;
 	  		cloudRows[i].mesh.position.y = cloudH * Math.sin(Math.PI/2 + Math.PI/12);
 	  
 	  		scene.add(cloudRows[i].mesh);
