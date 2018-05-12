@@ -316,8 +316,8 @@ function loop(){
 	
 	for(var i = 0; i < 4; i++){
 		
-		cloudRows.mesh.position.z = cloudH * Math.cos(clock.elapsedTime);
-  		cloudRows.mesh.position.y = - cloudH * Math.sin(clock.elapsedTime);
+		cloudRows[i].mesh.position.z = cloudH * Math.cos(clock.elapsedTime);
+  		cloudRows[i].mesh.position.y = - cloudH * Math.sin(clock.elapsedTime);
 		cloudRows[i].mesh.getWorldPosition(targetVector);
 		/*if(targetVector.z > 500 &&  targetVector.y > 0)
 		{
