@@ -169,7 +169,7 @@ function createGround(){
   ground.mesh.position.y = 0;
   ground.mesh.position.z = 0;
 
-  scene.add(ground.mesh);
+ // scene.add(ground.mesh);
 }
 
 
