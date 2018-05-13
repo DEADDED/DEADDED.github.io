@@ -325,7 +325,7 @@ function loop(){
 		//{
 			//if(flaPos.distanceTo(cloudRows[i].clouds[i].mesh.position) < 5)
 				//alert("collision!!!");
-			//console.log("qwl");
+			console.log("qwl");
 		//}
 		
 		/*cloudRows[i].mesh.position.z = cloudH * Math.cos(clock.elapsedTime);
@@ -345,8 +345,8 @@ function loop(){
 		  cloudRows[i].rot = 0;
 		  scene.add(cloudRows[i].mesh);
 			
-			console.log("change");
-			console.log(cloudRows[i].clouds.length);
+			//console.log("change");
+			//console.log(cloudRows[i].clouds.length);
 		}
 		cloudRows[i].mesh.position.z = cloudH * Math.cos(cloudRows[i].rot);
 		cloudRows[i].mesh.position.y = -cloudH * Math.sin(cloudRows[i].rot);
