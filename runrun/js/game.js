@@ -340,7 +340,7 @@ function loop(){
 					b[j].mesh.getWorldPosition(newTarget);
 					if(flaPos.distanceTo(newTarget) < 20 && targetVector.y > 150)
 					{
-						flamingo.visible = false;
+						scene.remove(flamingo);
 						alert("You lose... Reload the page to try again.");
 						
 					}
