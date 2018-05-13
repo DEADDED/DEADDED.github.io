@@ -483,7 +483,7 @@ function updateFlamingo(){
 	
 	
 	 
-  flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
+  //flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
 	//alert(flaPos);
 	//treePos.distanceTo(heroSphere.position)
   //console.log(flaPos.distanceTo(cloud.mesh.position));
