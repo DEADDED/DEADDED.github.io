@@ -327,7 +327,8 @@ function loop(){
 			flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
 			//console.log(flaPos.distanceTo(ground.mesh.position));
 			//console.log(cloudRows[i].mesh.position.distanceTo(ground.mesh.position));
-			console.log(flaPos.distanceTo(cloudRows[i].mesh.position));
+			if(flamingo.position.z - cloudRows[i].mesh.position.z < 20 && cloudRows[i].mesh.position.y - flamingo.position.y < 20)
+				console.log(cloudRows[i].mesh.position," ",flamingo.position);
 
 			//for(var j = 0; j < b.length; j++)
 			//{
