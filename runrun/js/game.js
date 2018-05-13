@@ -326,15 +326,18 @@ function loop(){
 		{
 			//flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
 			//console.log(flaPos.distanceTo(ground.mesh.position));
-			console.log(cloudRows[i].mesh.position.distanceTo(ground.mesh.position));
-			/*for(var j = 0; j < b.length; j++)
+			//console.log(cloudRows[i].mesh.position.distanceTo(ground.mesh.position));
+			
+			for(var j = 0; j < b.length; j++)
 			{
-				if(flaPos.distanceTo(b[j].mesh.position) < 20)
+			console.log(b[j].mesh.position.distanceTo(ground.mesh.position));
+				
+			/*	if(flaPos.distanceTo(b[j].mesh.position) < 20)
 				{
 					console.log(flaPos);
 					console.log(b[j].mesh.position);
-				}
-			}*/
+				}*/
+			}
 		}
 		
 		
