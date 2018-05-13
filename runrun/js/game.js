@@ -308,12 +308,12 @@ function loop(){
 		{
 			flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
 			cloudRows[i].mesh.getWorldPosition(targetVector);
-				for(var j = 0; j < b.length; j++)
+				for(var j = 0; j < cloudRows[i].clouds.length; j++)
 				{
 					
 					flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
 
-					b[j].mesh.getWorldPosition(newTarget);
+					cloudRows[i].clouds[j].mesh.getWorldPosition(newTarget);
 					if(flaPos.distanceTo(newTarget) < 20 && targetVector.y > 150 && flamingo.visible === true)
 					{
 						flamingo.visible = false;
