@@ -329,18 +329,18 @@ function loop(){
 			//console.log(flaPos.distanceTo(ground.mesh.position));
 			//console.log(cloudRows[i].mesh.position.distanceTo(ground.mesh.position));
 			cloudRows[i].mesh.getWorldPosition(targetVector);
-			if(targetVector.distanceTo(flaPos) < 20 && targetVector.y > 150)
-			{
-				console.log(flaPos," ");
+			//if(targetVector.distanceTo(flaPos) < 20 && targetVector.y > 150)
+			//{
+			//	console.log(flaPos," ");
 				for(var j = 0; j < b.length; j++)
 				{
 					
-					//flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
+					flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
 					//console.log(flaPos);
 					b[j].mesh.getWorldPosition(newTarget);
-					//if(flaPos.distanceTo(newTarget) < 20)
-						//alert("collision!");
-					console.log("newTarget", newTarget);
+					if(flaPos.distanceTo(newTarget) < 20)
+						alert("collision!");
+					//console.log("newTarget", newTarget);
 						
 				}
 			
