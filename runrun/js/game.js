@@ -60,11 +60,6 @@ function createScene() {
   camera.position.y = 950;
   camera.position.z = 600;
   
-  
-  //camera.rotation.z = Math.PI / 2;
- 
-  
-
   renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
   renderer.setSize(WIDTH, HEIGHT);
   renderer.shadowMap.enabled = true;
@@ -116,9 +111,6 @@ Ground = function(){
 
   geom.applyMatrix(new THREE.Matrix4().makeRotationX(-Math.PI/2));
   geom.applyMatrix(new THREE.Matrix4().makeRotationY(Math.PI/2));
-
-
-  //geom.mergeVertices();
 
   var l = geom.vertices.length;
 
@@ -267,16 +259,6 @@ cloudRow.prototype.removeRow = function(){
 	scene.remove(this.mesh);
 }
 
-cloudRow.prototype.removeClouds = function(){
-	for(var i = 0; i < this.clouds.length; i++){
-		this.mesh.remove(this.clouds[i].mesh);
-		scene.remove(this.clouds[i]);
-	}
-	this.clouds.splice(0);
-	//renderer.render();
-	console.log("remove");
-}
-
 cloudRow.prototype.addClouds = function(){
 	for(var i = 0; i < 3; i++)
   {
@@ -299,12 +281,9 @@ cloudRow.prototype.addClouds = function(){
 }
 
 
-
-
 function loop(){
-   //updateFlamingo();	
 	
-  requestAnimationFrame(loop);
+  
   //camera.rotation.z += 0.001;
 
   var delta = clock.getDelta();
@@ -443,6 +422,7 @@ function loop(){
 	
 	
   //renderer.clear();
+  requestAnimationFrame(loop);
   renderer.render(scene, camera);
   
 }
