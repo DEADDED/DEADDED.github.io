@@ -333,7 +333,7 @@ function loop(){
 				for(var j = 0; j < b.length; j++)
 				{
 					if(Math.abs(b[j].mesh.position.x - flaPos.x) < 20)
-						console.log("collision");
+						alert("collision");
 				}
 			
 			}
