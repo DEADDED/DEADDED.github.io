@@ -35,7 +35,7 @@ var Sky = new THREE.Object3D();
 var sideCloudsCount = 12;
 angle = 2 * Math.PI / sideCloudsCount;
 
-clock = new THREE.Clock();
+clock = new THREE.Clock(false);
 clock.start();
 
 
