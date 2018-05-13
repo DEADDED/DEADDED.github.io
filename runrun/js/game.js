@@ -27,6 +27,7 @@ var row;
 var cloudRows = [];
 
 var targetVector = new THREE.Vector3();
+var newTarget = new THREE.Vector3();
 
 var Sky = new THREE.Object3D();
 
@@ -334,7 +335,8 @@ function loop(){
 				{
 					
 					flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
-					if(flaPos.distanceTo(b[j].mesh.position) < 20)
+					b[j].mesh.getWorldPosition(newTarget);
+					if(flaPos.distanceTo(newTarget) < 20)
 						alert("collision!");
 						
 				}
