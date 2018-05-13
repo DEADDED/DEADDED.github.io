@@ -321,8 +321,8 @@ function loop(){
 	
 	//rotUpdate += 0.00001;
 	for(var i = 0; i < 8; i++){
-		var cld = cloudRows[i].clouds;
-		console.log(cld);
+		
+		console.log(cloudRows[i]);
 		/*for(var j = 0; j < cld.length; i++)
 		{
 			if(flaPos.distanceTo(cld[j].mesh.position) < 20)
