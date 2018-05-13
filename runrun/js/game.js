@@ -180,7 +180,7 @@ function createGround(){
 Cloud = function(){
   this.mesh = new THREE.Object3D();
  //var geom = new THREE.BoxGeometry(15,15,15);
-	var geom = new THREE.SphereGeometry(15,15,15);
+	var geom = new THREE.SphereGeometry(15,8,8);
 	
  var mat = new THREE.MeshPhongMaterial({
  	color: 0xffffff});
