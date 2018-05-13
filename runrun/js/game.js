@@ -338,7 +338,7 @@ function loop(){
 					flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
 					//console.log(flaPos);
 					b[j].mesh.getWorldPosition(newTarget);
-					if(flaPos.distanceTo(newTarget) < 20)
+					if(flaPos.distanceTo(newTarget) < 20 && targetVector.y > 150)
 						alert("collision!");
 					//console.log("newTarget", newTarget);
 						
