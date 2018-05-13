@@ -519,7 +519,7 @@ function init(event){
 	scoreText = document.createElement('div');
 	scoreText.style.position = 'absolute';
 	//text2.style.zIndex = 1;    // if you still don't see the label, try uncommenting this
-	scoreText.style.width = 100;
+	scoreText.style.width = 150;
 	scoreText.style.height = 100;
 	//scoreText.style.backgroundColor = "blue";
 	scoreText.innerHTML = "You flew 0 seconds";
