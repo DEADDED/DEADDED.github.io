@@ -328,7 +328,7 @@ function loop(){
 			for(var j = 0; j < b.length; j++)
 			{
 				if(flaPos.distanceTo(b[j].mesh.position) < 20)
-					console.log("collision);
+					console.log("collision");
 			}
 		}
 		
