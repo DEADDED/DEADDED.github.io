@@ -450,8 +450,8 @@ function init(event){
   var loader = new THREE.JSONLoader();
 	loader.load( 'js/flamingo.js', function( geometry ) {
 	var material = new THREE.MeshPhongMaterial( { 
-            color: 0xffffff, 
-            //morphTargets: true, 
+           // color: 0xffffff, 
+            morphTargets: true, 
             vertexColors: THREE.FaceColors 
             //flatShading: true 
           } );
