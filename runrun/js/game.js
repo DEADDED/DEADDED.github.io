@@ -1,7 +1,7 @@
 
 var scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
-    renderer, container, clock, mixer, cloud;
+    renderer, container, clock, mixer;
 
 var flamingo;
 
@@ -21,7 +21,7 @@ var rotUpdate = 0.008;
 var sideClouds;
 var flaPos = new THREE.Vector3();
 
-var clouds = [];
+//var clouds = [];
 
 var row;
 
@@ -30,7 +30,6 @@ var cloudRows = [];
 var targetVector = new THREE.Vector3();
 var newTarget = new THREE.Vector3();
 
-var Sky = new THREE.Object3D();
 
 var sideCloudsCount = 12;
 angle = 2 * Math.PI / sideCloudsCount;
@@ -172,10 +171,10 @@ function createGround(){
 
 Cloud = function(){
   this.mesh = new THREE.Object3D();
- //var geom = new THREE.BoxGeometry(15,15,15);
-var geom = new THREE.SphereGeometry(15,8,4);
+
+  var geom = new THREE.SphereGeometry(15,8,4);
 	
- var mat = new THREE.MeshPhongMaterial({
+  var mat = new THREE.MeshPhongMaterial({
  	color: 0xffffff});
 
  var blocksCount = 5 + Math.floor( Math.random()*3);
@@ -202,7 +201,7 @@ var geom = new THREE.SphereGeometry(15,8,4);
 	var rand = 0 - 0.5 + Math.random() * (6 - 0 + 1)
     	rand = Math.round(rand);
 	this.mesh.rotateZ((Math.PI / 6) * rand);
-	//this.mesh.position.x = -150;
+
 }
 
 SideClouds = function(){
@@ -273,7 +272,6 @@ cloudRow.prototype.addClouds = function(){
 		  	this.mesh.add(c.mesh);
 		  	this.clouds.push(c);
 		  
-		  	//clouds.push(c);
 		  }
 	  }
 	  else break;
@@ -294,16 +292,13 @@ function loop(){
   ground.mesh.rotation.x += 0.005;
 	
 		
-	//row.mesh.position.z = -Math.cos(clock.elapsedTime/2) * 1046;
-	//row.mesh.position.y = Math.sin(clock.elapsedTime/2) * 1046;
+
 	
-	sideClouds.mesh.rotation.x += 0.007;
-	
-	//Sky.rotation.x += 0.009;
-	
-	//rotUpdate += 0.00001;
-	for(var i = 0; i < 8; i++){
-		var b= [].concat(cloudRows[i].clouds);
+  sideClouds.mesh.rotation.x += 0.007;
+
+	for(var i = 0; i < 8; i++)
+	{
+		
 		if(cloudRows[i].clouds.length > 0)
 		{
 			flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
@@ -319,11 +314,8 @@ function loop(){
 						flamingo.visible = false;
 						clock.stop();
 						alert("You flew " + score + " seconds, but lose... Reload the page to try again.");
-						
-					}
-						
+					}	
 				}
-
 		}
 		
 		
@@ -347,13 +339,13 @@ function loop(){
 		cloudRows[i].mesh.position.y = -cloudH * Math.sin(cloudRows[i].rot);
 
 	}
+	
 	if(Math.floor(clock.elapsedTime) > score)
 	{
 		score = Math.floor(clock.elapsedTime);
 		scoreText.innerHTML = "You flew " + score + " seconds.";
 	}
 		
-  
   renderer.render(scene, camera);
   
 }
