@@ -331,14 +331,16 @@ function loop(){
 			cloudRows[i].mesh.getWorldPosition(targetVector);
 			if(targetVector.distanceTo(flaPos) < 20 && targetVector.y > 150)
 			{
+				console.log(flaPos," ");
 				for(var j = 0; j < b.length; j++)
 				{
 					
-					flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
-					console.log(flaPos);
+					//flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
+					//console.log(flaPos);
 					b[j].mesh.getWorldPosition(newTarget);
-					if(flaPos.distanceTo(newTarget) < 20)
-						alert("collision!");
+					//if(flaPos.distanceTo(newTarget) < 20)
+						//alert("collision!");
+					console.log("newTarget", newTarget);
 						
 				}
 			
