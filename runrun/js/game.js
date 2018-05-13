@@ -328,7 +328,7 @@ function loop(){
 			//console.log(flaPos.distanceTo(ground.mesh.position));
 			//console.log(cloudRows[i].mesh.position.distanceTo(ground.mesh.position));
 			cloudRows[i].mesh.getWorldPosition(targetVector);
-			while(targetVector.distanceTo(flaPos) < 20 && targetVector.y > 150)
+			if(targetVector.distanceTo(flaPos) < 20 && targetVector.y > 150)
 			{
 				for(var j = 0; j < b.length; j++)
 				{
