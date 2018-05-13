@@ -343,7 +343,7 @@ function loop(){
 					if(flaPos.distanceTo(newTarget) < 20 && targetVector.y > 150 && flamingo.visible === true)
 					{
 						flamingo.visible = false;
-						alert("You flew " + score " seconds, but lose... Reload the page to try again.");
+						alert("You flew " + score + " seconds, but lose... Reload the page to try again.");
 						
 					}
 						
