@@ -514,9 +514,9 @@ function init(event){
 	scoreText.style.width = 100;
 	scoreText.style.height = 100;
 	//scoreText.style.backgroundColor = "blue";
-	scoreText.innerHTML = "0";
+	scoreText.innerHTML = "Your score is 0";
 	scoreText.style.top = 50 + 'px';
-	scoreText.style.left = 10 + 'px';
+	scoreText.style.left = 50 + 'px';
 	document.body.appendChild(scoreText);
 	
 	
