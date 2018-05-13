@@ -327,8 +327,8 @@ function loop(){
 			flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
 			//console.log(flaPos.distanceTo(ground.mesh.position));
 			//console.log(cloudRows[i].mesh.position.distanceTo(ground.mesh.position));
-			if(flamingo.position.z - cloudRows[i].mesh.position.z < 20 && cloudRows[i].mesh.position.y - flamingo.position.y < 20 && 
-			   cloudRows[i].mesh.position.z > 0 && cloudRows[i].mesh.position.y > 0)
+			cloudRows[i].mesh.getWorldPosition(targetVector);
+			if(targetVector.distanceTo(flaPos) < 20)
 				console.log(cloudRows[i].mesh.position," ",flamingo.position);
 
 			//for(var j = 0; j < b.length; j++)
@@ -347,7 +347,7 @@ function loop(){
 		
 		/*cloudRows[i].mesh.position.z = cloudH * Math.cos(clock.elapsedTime);
   		cloudRows[i].mesh.position.y = - cloudH * Math.sin(clock.elapsedTime);*/
-		cloudRows[i].mesh.getWorldPosition(targetVector);
+		
 		cloudRows[i].mesh.rotation.x += 0.009;
 		
 		cloudRows[i].rot += rotUpdate;
