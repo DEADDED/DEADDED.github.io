@@ -13,6 +13,7 @@ var lCloudsPos = -250;
 var rCloudsPos = - lCloudsPos;
 
 var cloudH = 1046;
+var score = 0;
 
 var globalRot = 0.785;
 var rotUpdate = 0.008;
@@ -35,6 +36,7 @@ var sideCloudsCount = 12;
 angle = 2 * Math.PI / sideCloudsCount;
 
 clock = new THREE.Clock();
+clock.start();
 
 
 function createScene() {
@@ -514,7 +516,7 @@ function init(event){
 	scoreText.style.width = 100;
 	scoreText.style.height = 100;
 	//scoreText.style.backgroundColor = "blue";
-	scoreText.innerHTML = "Your score is 0";
+	scoreText.innerHTML = "You flew 0 seconds";
 	scoreText.style.top = 50 + 'px';
 	scoreText.style.left = 50 + 'px';
 	document.body.appendChild(scoreText);
