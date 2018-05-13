@@ -321,12 +321,12 @@ function loop(){
 	
 	//rotUpdate += 0.00001;
 	for(var i = 0; i < 8; i++){
-		//for(var i = 0; i < cloudRows[i].clouds.length; i++)
-		//{
-			//if(flaPos.distanceTo(cloudRows[i].clouds[i].mesh.position) < 5)
+		for(var j = 0; j < cloudRows[i].clouds.length; i++)
+		{
+			if(flaPos.distanceTo(cloudRows[i].clouds[j].mesh.position) < 20)
 				//alert("collision!!!");
 			console.log("qwl");
-		//}
+		}
 		
 		/*cloudRows[i].mesh.position.z = cloudH * Math.cos(clock.elapsedTime);
   		cloudRows[i].mesh.position.y = - cloudH * Math.sin(clock.elapsedTime);*/
