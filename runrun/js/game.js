@@ -322,11 +322,8 @@ function loop(){
 	//rotUpdate += 0.00001;
 	for(var i = 0; i < 8; i++){
 		var b= [].concat(cloudRows[i].clouds);
-		//console.log(b);
-		if(b.length>0){
+		console.log(b.length);
 		
-			console.log(b);
-		}
 		
 		
 		/*cloudRows[i].mesh.position.z = cloudH * Math.cos(clock.elapsedTime);
