@@ -441,30 +441,19 @@ function init(event){
 	  cloudRows[i] = new cloudRow();
 	  
 	  cloudRows[i].addClouds();
-	  
-	  //cloudRows[i].mesh.position.z = cloudH * Math.cos(Math.PI/2 + Math.PI/12 * i);
-	  //cloudRows[i].mesh.position.y = cloudH * Math.sin(Math.PI/2 + Math.PI/12 * i);
 	  cloudRows[i].rot = globalRot * i;
-	  
 	  
 	  scene.add(cloudRows[i].mesh);
 	  
-	  //Sky.add(cloudRows[i].mesh);
-	  
   }
-	//scene.add(Sky);
-	
-  //clock = new THREE.Clock();
-
-  //mixer = new THREE.AnimationMixer( scene );
 
   var loader = new THREE.JSONLoader();
 	loader.load( 'js/flamingo.js', function( geometry ) {
 	var material = new THREE.MeshPhongMaterial( { 
             color: 0xffffff, 
-            morphTargets: true, 
-            vertexColors: THREE.FaceColors, 
-            flatShading: true 
+            //morphTargets: true, 
+            vertexColors: THREE.FaceColors 
+            //flatShading: true 
           } );
           
           flamingo = new THREE.Mesh(geometry, material);
@@ -478,7 +467,7 @@ function init(event){
           scene.add(flamingo);
 		
           mixer = new THREE.AnimationMixer(flamingo);
-          mixer.clipAction(geometry.animations[0]).setDuration(3).play();} );	
+          mixer.clipAction(geometry.animations[0]).setDuration(1).play();} );	
 	
 	scoreText = document.createElement('div');
 	scoreText.style.position = 'absolute';
