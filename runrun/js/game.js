@@ -328,7 +328,15 @@ function loop(){
 			//console.log(flaPos.distanceTo(ground.mesh.position));
 			//console.log(cloudRows[i].mesh.position.distanceTo(ground.mesh.position));
 			cloudRows[i].mesh.getWorldPosition(targetVector);
-			if(targetVector.distanceTo(flaPos) < 20 && targetVector.y > 150)
+			while(targetVector.distanceTo(flaPos) < 20 && targetVector.y > 150)
+			{
+				for(var j = 0; j < b.length; j++)
+				{
+					if(Math.abs(b[j].mesh.position.x - flaPos.x) < 20)
+						console.log("collision");
+				}
+			
+			}
 				console.log(cloudRows[i].mesh.position," ",flamingo.position);
 
 			//for(var j = 0; j < b.length; j++)
