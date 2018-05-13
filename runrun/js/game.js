@@ -18,7 +18,7 @@ var globalRot = 0.785;
 var rotUpdate = 0.008;
 
 var sideClouds;
-var flaPos;
+//var flaPos;
 
 var clouds = [];
 
@@ -473,7 +473,7 @@ function updateFlamingo(){
 		flamingo.position.x = -100;
 	
 	
-	 flaPos = new THREE.Vector3();
+	 var flaPos = new THREE.Vector3();
   flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
 	//alert(flaPos);
 	//treePos.distanceTo(heroSphere.position)
