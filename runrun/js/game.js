@@ -349,7 +349,7 @@ function loop(){
 			if(flaPos.distanceTo(cloudRows[i].clouds[i].mesh.position) < 20)
 				alert("collision!!!");
 		}
-		if(flaPos.distanceTo(cloud.mesh.position) < 20)
+		//if(flaPos.distanceTo(cloud.mesh.position) < 20)
 	//	console.log("COLLISION!!!");
 		
 		//console.log(cloudRows[i].mesh.position.z,"  ", cloudRows[i].mesh.position.y);
