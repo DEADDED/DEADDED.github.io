@@ -322,13 +322,17 @@ function loop(){
 	//rotUpdate += 0.00001;
 	for(var i = 0; i < 8; i++){
 		var b= [].concat(cloudRows[i].clouds);
-		console.log(b);
-		/*for(var j = 0; j < cld.length; i++)
-		{
-			if(flaPos.distanceTo(cld[j].mesh.position) < 20)
+		//console.log(b);
+		if(b.length>0){
+		
+			for(var j = 0; j < b.length; i++)
+			{
+				if(flaPos.distanceTo(b[j].mesh.position) < 20)
 				//alert("collision!!!");
-			console.log("qwl");
-		}*/
+				console.log("qwl");
+			}
+		}
+		
 		
 		/*cloudRows[i].mesh.position.z = cloudH * Math.cos(clock.elapsedTime);
   		cloudRows[i].mesh.position.y = - cloudH * Math.sin(clock.elapsedTime);*/
