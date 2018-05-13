@@ -323,7 +323,13 @@ function loop(){
 	for(var i = 0; i < 8; i++){
 		var b= [].concat(cloudRows[i].clouds);
 		if(b.length > 0)
-			console.log(b.length);
+		{
+			flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
+			for(var j = 0; j < b.length; j++)
+			{
+				if(
+			}
+		}
 		
 		
 		
