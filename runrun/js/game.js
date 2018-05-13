@@ -322,7 +322,8 @@ function loop(){
 	//rotUpdate += 0.00001;
 	for(var i = 0; i < 8; i++){
 		var b= [].concat(cloudRows[i].clouds);
-		console.log(b.length);
+		if(b.length > 0)
+			console.log(b.length);
 		
 		
 		
