@@ -339,7 +339,12 @@ function loop(){
 					//console.log(flaPos);
 					b[j].mesh.getWorldPosition(newTarget);
 					if(flaPos.distanceTo(newTarget) < 20 && targetVector.y > 150)
-						alert("collision!");
+					{
+						flamingo.visible = false;
+						alert("You lose... Reload the page to try again.");
+						
+					}
+						
 					//console.log("newTarget", newTarget);
 						
 				}
