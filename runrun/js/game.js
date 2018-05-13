@@ -344,6 +344,14 @@ function loop(){
 		cloudRows[i].mesh.position.z = cloudH * Math.cos(cloudRows[i].rot);
 		cloudRows[i].mesh.position.y = -cloudH * Math.sin(cloudRows[i].rot);
 		
+		for(var i = 0; i < cloudRows[i].clouds.length; i++)
+		{
+			if(flaPos.distanceTo(cloudRows[i].clouds[i].mesh.position) < 20)
+				alert("collision!!!");
+		}
+		if(flaPos.distanceTo(cloud.mesh.position) < 20)
+	//	console.log("COLLISION!!!");
+		
 		//console.log(cloudRows[i].mesh.position.z,"  ", cloudRows[i].mesh.position.y);
 		/*if(targetVector.z > 500 &&  targetVector.y > 0)
 		{
