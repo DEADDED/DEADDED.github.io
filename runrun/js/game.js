@@ -283,7 +283,7 @@ cloudRow.prototype.addClouds = function(){
 
 function loop(){
 	
-  
+  requestAnimationFrame(loop);
   //camera.rotation.z += 0.001;
 
   var delta = clock.getDelta();
@@ -422,7 +422,7 @@ function loop(){
 	
 	
   //renderer.clear();
-  requestAnimationFrame(loop);
+  
   renderer.render(scene, camera);
   
 }
