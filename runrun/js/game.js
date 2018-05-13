@@ -337,7 +337,7 @@ function loop(){
 				}
 			
 			}
-				console.log(cloudRows[i].mesh.position," ",flamingo.position);
+				//console.log(cloudRows[i].mesh.position," ",flamingo.position);
 
 			//for(var j = 0; j < b.length; j++)
 			//{
