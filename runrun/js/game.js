@@ -332,9 +332,20 @@ function loop(){
 			{
 				for(var j = 0; j < b.length; j++)
 				{
+					
 					flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
 					if(Math.abs(b[j].mesh.position.x - flaPos.x) < 30)
-						alert("collision");
+					{
+						console.log("collision");
+						for(var x = 0; x < b.length; x++)
+						{	
+							var vec = new THREE.Vector3();
+							b[x].mesh.getWorldPosition(vec);
+							console.log(vec);
+						}
+					
+					}
+						
 				}
 			
 			}
