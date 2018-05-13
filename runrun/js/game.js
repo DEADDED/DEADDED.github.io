@@ -284,18 +284,16 @@ cloudRow.prototype.addClouds = function(){
 function loop(){
 	
   requestAnimationFrame(loop);
-  //camera.rotation.z += 0.001;
 
+	
+  updateFlamingo();	
   var delta = clock.getDelta();
   mixer.update(delta);
-				/*for ( var i = 0; i < mixers.length; i ++ ) {
-					mixers[ i ].update( delta );
-				}*/
-  //flamingo.rotation.y += 0.1;
-	//flamingo.position.x += 1;
-	ground.moveWaves();
+
+  ground.moveWaves();
   ground.mesh.rotation.x += 0.005;
-	updateFlamingo();	
+	
+		
 	//row.mesh.position.z = -Math.cos(clock.elapsedTime/2) * 1046;
 	//row.mesh.position.y = Math.sin(clock.elapsedTime/2) * 1046;
 	
