@@ -143,7 +143,6 @@ Ground = function(){
 
   this.mesh = new THREE.Mesh(geom,material);
 	
-	this.mesh.add(new THREE.SphereGeometry(999,30,30), material);
 
   this.mesh.recieveShadow = true;
 }
