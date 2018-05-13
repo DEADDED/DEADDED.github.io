@@ -328,7 +328,7 @@ function loop(){
 			//console.log(flaPos.distanceTo(ground.mesh.position));
 			//console.log(cloudRows[i].mesh.position.distanceTo(ground.mesh.position));
 			cloudRows[i].mesh.getWorldPosition(targetVector);
-			if(targetVector.distanceTo(flaPos) < 20)
+			if(targetVector.distanceTo(flaPos) < 20 && targetVector.y > 150)
 				console.log(cloudRows[i].mesh.position," ",flamingo.position);
 
 			//for(var j = 0; j < b.length; j++)
@@ -435,6 +435,7 @@ function init(event){
 	  //cloudRows[i].mesh.position.z = cloudH * Math.cos(Math.PI/2 + Math.PI/12 * i);
 	  //cloudRows[i].mesh.position.y = cloudH * Math.sin(Math.PI/2 + Math.PI/12 * i);
 	  cloudRows[i].rot = globalRot * i;
+	  
 	  
 	  scene.add(cloudRows[i].mesh);
 	  
