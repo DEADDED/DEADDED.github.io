@@ -325,7 +325,7 @@ function loop(){
 		if(b.length > 0)
 		{
 			flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
-			flaPos.distanceTo(ground.mesh.position);
+			console.log(flaPos.distanceTo(ground.mesh.position));
 			/*for(var j = 0; j < b.length; j++)
 			{
 				if(flaPos.distanceTo(b[j].mesh.position) < 20)
