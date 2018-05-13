@@ -281,7 +281,7 @@ cloudRow.prototype.addClouds = function(){
 		  if(addOrNot > 0.5){
 		  	var c = new Cloud();
 		  
-		  	c.mesh.position.x = -70 + 70 * i;
+		  	c.mesh.position.x = -100 + 100 * i;
 		  
 		  	this.mesh.add(c.mesh);
 		  	this.clouds.push(c);
