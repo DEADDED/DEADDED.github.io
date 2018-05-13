@@ -339,7 +339,7 @@ function loop(){
 		  scene.add(cloudRows[i].mesh);
 			
 			console.log("change");
-			console.log(scene.children.length);
+			console.log(cloudRows[i].clouds.length);
 		}
 		cloudRows[i].mesh.position.z = cloudH * Math.cos(cloudRows[i].rot);
 		cloudRows[i].mesh.position.y = -cloudH * Math.sin(cloudRows[i].rot);
