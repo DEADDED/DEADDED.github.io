@@ -384,7 +384,7 @@ function loop(){
 	}
 	
 	
-  renderer.clear();
+  //renderer.clear();
   renderer.render(scene, camera);
   
 }
