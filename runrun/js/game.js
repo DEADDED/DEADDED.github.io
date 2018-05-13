@@ -343,7 +343,7 @@ function loop(){
 					if(flaPos.distanceTo(newTarget) < 20 && targetVector.y > 150 && flamingo.visible === true)
 					{
 						flamingo.visible = false;
-						alert("You lose... Reload the page to try again.");
+						alert("You flew " + score " seconds, but lose... Reload the page to try again.");
 						
 					}
 						
@@ -431,6 +431,12 @@ function loop(){
 		}
 		*/
 	}
+	if(Math.floor(clock.elapsedTime) > score)
+	{
+		score = Math.floor(clock.elapsedTime);
+		scoreText.innerHTML = "You flew " + score + " seconds.";
+	}
+		
 	
 	
   //renderer.clear();
