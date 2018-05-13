@@ -304,15 +304,10 @@ function loop(){
 	//rotUpdate += 0.00001;
 	for(var i = 0; i < 8; i++){
 		var b= [].concat(cloudRows[i].clouds);
-		if(b.length > 0)
+		if(cloudRows[i].clouds.length > 0)
 		{
 			flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
-			//console.log(flaPos.distanceTo(ground.mesh.position));
-			//console.log(cloudRows[i].mesh.position.distanceTo(ground.mesh.position));
 			cloudRows[i].mesh.getWorldPosition(targetVector);
-			//if(targetVector.distanceTo(flaPos) < 20 && targetVector.y > 150)
-			//{
-			//	console.log(flaPos," ");
 				for(var j = 0; j < b.length; j++)
 				{
 					
@@ -324,7 +319,6 @@ function loop(){
 						flamingo.visible = false;
 						clock.stop();
 						alert("You flew " + score + " seconds, but lose... Reload the page to try again.");
-						init();
 						
 					}
 						
