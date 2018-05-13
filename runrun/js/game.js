@@ -317,39 +317,21 @@ function loop(){
 				{
 					
 					flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
-					//console.log(flaPos);
+
 					b[j].mesh.getWorldPosition(newTarget);
 					if(flaPos.distanceTo(newTarget) < 20 && targetVector.y > 150 && flamingo.visible === true)
 					{
 						flamingo.visible = false;
 						clock.stop();
 						alert("You flew " + score + " seconds, but lose... Reload the page to try again.");
+						init();
 						
 					}
 						
-					//console.log("newTarget", newTarget);
-						
 				}
-			
-			//}
-				//console.log(cloudRows[i].mesh.position," ",flamingo.position);
 
-			//for(var j = 0; j < b.length; j++)
-			//{
-			//console.log(b[j].mesh.position.distanceTo(ground.mesh.position));
-				
-			/*	if(flaPos.distanceTo(b[j].mesh.position) < 20)
-				{
-					console.log(flaPos);
-					console.log(b[j].mesh.position);
-				}*/
-			//}
 		}
 		
-		
-		
-		/*cloudRows[i].mesh.position.z = cloudH * Math.cos(clock.elapsedTime);
-  		cloudRows[i].mesh.position.y = - cloudH * Math.sin(clock.elapsedTime);*/
 		
 		cloudRows[i].mesh.rotation.x += 0.009;
 		
@@ -365,51 +347,11 @@ function loop(){
 		  cloudRows[i].rot = 0;
 		  scene.add(cloudRows[i].mesh);
 			
-			//console.log("change");
-			//console.log(cloudRows[i].clouds.length);
 		}
+		
 		cloudRows[i].mesh.position.z = cloudH * Math.cos(cloudRows[i].rot);
 		cloudRows[i].mesh.position.y = -cloudH * Math.sin(cloudRows[i].rot);
-		
-		
-		//console.log("qwl");
-		//for(var i = 0; i < cloudRows[i].clouds.length; i++)
-		//{
-			//if(flaPos.distanceTo(cloudRows[i].clouds[i].mesh.position) < 5)
-				//alert("collision!!!");
-			//console.log("qwl");
-		//}
-		//if(flaPos.distanceTo(cloud.mesh.position) < 20)
-	//	console.log("COLLISION!!!");
-		
-		//console.log(cloudRows[i].mesh.position.z,"  ", cloudRows[i].mesh.position.y);
-		/*if(targetVector.z > 500 &&  targetVector.y > 0)
-		{
-			Sky.remove(cloudRows[i].mesh);
-			
-			cloudRows[i] = new cloudRow();
-			cloudRows[i].addClouds();
-			
-			cloudRows[i].mesh.position.z = targetVector.z - 500;
-	  		cloudRows[i].mesh.position.y = cloudH * Math.sin(Math.PI/2 + Math.PI/12);
-	  
-	  		scene.add(cloudRows[i].mesh);
-			Sky.add(cloudRows[i].mesh);
-			//renderer.render();
-			
-			
-		}*/
-		   //console.log("gone");
-		
-		/*if(targetVector.z >  cloudH / 2 + 200)
-		{
-			console.log("gone");
-			cloudRows[i].removeClouds();
-			cloudRows[i].addClouds();
-			cloudRows[i].mesh.position.z = cloudH * Math.cos(7 * Math.PI/12);
-			cloudRows[i].mesh.position.y = cloudH * Math.sin(7 * Math.PI/12);
-		}
-		*/
+
 	}
 	if(Math.floor(clock.elapsedTime) > score)
 	{
@@ -417,9 +359,6 @@ function loop(){
 		scoreText.innerHTML = "You flew " + score + " seconds.";
 	}
 		
-	
-	
-  //renderer.clear();
   
   renderer.render(scene, camera);
   
@@ -435,7 +374,6 @@ function init(event){
   createLights();
   createGround();
   createSideClouds();
-  //createRow();
 	
   for(var i = 0; i < 8; i++){
 	  cloudRows[i] = new cloudRow();
@@ -447,13 +385,12 @@ function init(event){
 	  
   }
 
-  var loader = new THREE.JSONLoader();
+  	var loader = new THREE.JSONLoader();
+	
 	loader.load( 'js/flamingo.js', function( geometry ) {
 	var material = new THREE.MeshPhongMaterial( { 
-           // color: 0xffffff, 
             morphTargets: true, 
             vertexColors: THREE.FaceColors 
-            //flatShading: true 
           } );
           
           flamingo = new THREE.Mesh(geometry, material);
@@ -466,8 +403,12 @@ function init(event){
 
           scene.add(flamingo);
 		
+		
+		
           mixer = new THREE.AnimationMixer(flamingo);
           mixer.clipAction(geometry.animations[0]).setDuration(1).play();} );	
+	
+	
 	
 	scoreText = document.createElement('div');
 	scoreText.style.position = 'absolute';
