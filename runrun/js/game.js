@@ -325,7 +325,7 @@ function loop(){
 		//{
 			//if(flaPos.distanceTo(cloudRows[i].clouds[i].mesh.position) < 5)
 				//alert("collision!!!");
-			console.log("qwl");
+			//console.log("qwl");
 		//}
 		
 		/*cloudRows[i].mesh.position.z = cloudH * Math.cos(clock.elapsedTime);
