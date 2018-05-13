@@ -473,7 +473,7 @@ function init(event){
           
           flamingo = new THREE.Mesh(geometry, material);
 	  
-          flamingo.position.x = 0;
+          flamingo.position.x = -85;
           flamingo.position.y = 930;
 	  flamingo.position.z = 480;
           flamingo.scale.set(.3,.3,.3);
