@@ -478,38 +478,19 @@ function init(event){
           scene.add(flamingo);
 		
           mixer = new THREE.AnimationMixer(flamingo);
-          mixer.clipAction(geometry.animations[0]).setDuration(1).play();
-
-				} );
-	
-  
- /*var cloudGeom = new THREE.BoxGeometry(10,10,10);
- var cloudMat = new THREE.MeshPhongMaterial({
-	 color: 0xffffff,
-	 flatShading: true});
-  cloud = new THREE.Mesh(cloudGeom, cloudMat);*/
-	//cloud = new Cloud();
-  //cloud.mesh.position.y = -750;
-  //cloud.mesh.position.z = -400;
-
-  
- //scene.add(cloud.mesh);
-	
-	
+          mixer.clipAction(geometry.animations[0]).setDuration(3).play();} );	
 	
 	scoreText = document.createElement('div');
 	scoreText.style.position = 'absolute';
-	//text2.style.zIndex = 1;    // if you still don't see the label, try uncommenting this
+	
 	scoreText.style.width = 150;
 	scoreText.style.height = 100;
-	//scoreText.style.backgroundColor = "blue";
 	scoreText.innerHTML = "You flew 0 seconds";
 	scoreText.style.top = 50 + 'px';
 	scoreText.style.left = 50 + 'px';
 	document.body.appendChild(scoreText);
 	
-	
-	
+		
   loop();
 }
 var fPos, oldPos;
@@ -524,30 +505,9 @@ function updateFlamingo(){
 		flamingo.position.x = 100;
 	else if(flamingo.position.x < -100)
 		flamingo.position.x = -100;
-	
-	
-	 
-  //flaPos = flaPos.setFromMatrixPosition( flamingo.matrixWorld );
-	//alert(flaPos);
-	//treePos.distanceTo(heroSphere.position)
-  //console.log(flaPos.distanceTo(cloud.mesh.position));
-	//if(flaPos.distanceTo(cloud.mesh.position) < 20)
-	//	console.log("COLLISION!!!");
-	/*if(oldPos < fPos)
-		flamingo.rotation.z += 0.03;
-	else if (oldPos> fPos)
-		flamingo.rotation.z -= 0.03;
-	
-	else
-		flamingo.rotation.z = - Math.PI;*/
-	
-	/*if(flamingo.rotation.z >= Math.PI / 4)
-		flamingo.rotation.z = Math.PI/4;
-	else if(flamingo.rotation.z <= -Math.PI/4)
-		flamingo.rotation.z = -Math.PI/4;*/
+
 	oldPos = fPos;
 	 
- 
 }
 
 function handleOrientation(event){
