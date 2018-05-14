@@ -405,7 +405,7 @@ function loop(){
 					{
 						flamingo.visible = false;
 						clock.stop();
-						alert("You have flown " + score + " seconds, but lose... Reload the page to try again.");       //end game message
+						alert("You have flown " + score + " seconds, but lost... Reload the page to try again.");       //end game message
 					}	
 				}
 		}
