@@ -163,7 +163,7 @@ function createLights() {
   shadowLight.shadow.camera.top = 1000;
   shadowLight.shadow.camera.bottom = -1000;
   shadowLight.shadow.camera.near = 1;
-  shadowLight.shadow.camera.far = 1000;
+  shadowLight.shadow.camera.far = 10000;
   shadowLight.shadow.mapSize.width = 2048;
   shadowLight.shadow.mapSize.height = 2048;
 
