@@ -73,10 +73,7 @@ function init(event){
   
   //flamingo loading
 	loader.load( 'js/flamingo.js', function( geometry ) {
-	  var material = new THREE.MeshPhongMaterial( { 
-            morphTargets: true, 
-            vertexColors: THREE.FaceColors 
-          } );
+	  var material = new THREE.MeshPhongMaterial();
           
   flamingo = new THREE.Mesh(geometry, material);
 	  
