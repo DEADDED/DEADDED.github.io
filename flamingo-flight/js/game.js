@@ -405,7 +405,6 @@ function loop(){
 				}
 		}
 		
-		cloudRows[i].mesh.rotation.x += 0.09;
 		
 		cloudRows[i].rot += rotUpdate;
     
