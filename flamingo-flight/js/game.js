@@ -100,7 +100,7 @@ function init(event){
 	
 	scoreText.style.width = 150;
 	scoreText.style.height = 100;
-	scoreText.innerHTML = "You flew 0 seconds";
+	scoreText.innerHTML = "Flight time is 0 second.";
 	scoreText.style.top = 10 + '%';
 	scoreText.style.left = 10 + '%';
 	document.body.appendChild(scoreText);
@@ -405,7 +405,7 @@ function loop(){
 					{
 						flamingo.visible = false;
 						clock.stop();
-						alert("You flew " + score + " seconds, but lose... Reload the page to try again.");       //end game message
+						alert("You have flown " + score + " seconds, but lose... Reload the page to try again.");       //end game message
 					}	
 				}
 		}
@@ -437,7 +437,7 @@ function loop(){
 	if(Math.floor(clock.elapsedTime) > score)
 	{
 		score = Math.floor(clock.elapsedTime);
-		scoreText.innerHTML = "You flew " + score + " seconds.";
+		scoreText.innerHTML = "Flight time is " + score + " seconds.";
 	}
 		
   renderer.render(scene, camera);                                               //scene rendering
