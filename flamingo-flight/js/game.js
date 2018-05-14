@@ -21,7 +21,6 @@ var rotUpdate = 0.008;
 var flaPos = new THREE.Vector3();
 
 
-var row;
 var cloudRows = [];
 var cloudRowsCount = 8;
 var cloudPosDelta = 85;
