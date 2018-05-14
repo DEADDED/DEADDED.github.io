@@ -168,7 +168,7 @@ function createLights() {
   shadowLight.shadow.mapSize.height = 2048;
 
   scene.add(hemisphereLight);
-  //scene.add(shadowLight);
+  scene.add(shadowLight);
 }
 
 
