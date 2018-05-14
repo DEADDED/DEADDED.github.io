@@ -156,7 +156,7 @@ function createLights() {
 
   hemisphereLight = new THREE.HemisphereLight(0x996881,0xffffff, .9)
   shadowLight = new THREE.DirectionalLight(0xffffff, .9);
-  shadowLight.position.set(150, 350, 1200);
+  shadowLight.position.set(0, 1200, 1200);
   shadowLight.castShadow = true;
   shadowLight.shadow.camera.left = -400;
   shadowLight.shadow.camera.right = 400;
