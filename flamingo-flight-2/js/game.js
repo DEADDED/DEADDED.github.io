@@ -440,7 +440,7 @@ function loop(){
 		scoreText.innerHTML = "You flew " + score + " seconds.";
 	}
 		
-	if(score % 3 === 0)
+	if(score % 4 === 0)
   	{
   		rotUpdate+=0.00001;
   	}
