@@ -439,7 +439,14 @@ function loop(){
 		score = Math.floor(clock.elapsedTime);
 		scoreText.innerHTML = "Flight time is " + score + " seconds.";
 	}
-		
+
+  //increases the speed of rotation of clouds	
+  if(score % 5 === 0)
+  {
+  	rotUpdate+=0.00001;
+  }
+	  
+   	
   renderer.render(scene, camera);                                               //scene rendering
   
 }
