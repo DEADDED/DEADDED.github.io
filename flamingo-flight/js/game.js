@@ -73,7 +73,10 @@ function init(event){
   
   //flamingo loading
 	loader.load( 'js/flamingo.js', function( geometry ) {
-	  var material = new THREE.MeshPhongMaterial();
+	  var material = new THREE.MeshPhongMaterial( {
+		  morphTargets: true, 
+            	  vertexColors: THREE.FaceColors 
+          } );
           
   flamingo = new THREE.Mesh(geometry, material);
 	  
@@ -216,7 +219,7 @@ Ground.prototype.moveWaves = function(){
     var vprops = this.waves[i];
     
     //Assignment to each vertex of the position of each 'wave'
-    v.x = vprops.x + Math.cos(vprops.ang)*vprops.amp;
+    v.z = vprops.z + Math.cos(vprops.ang)*vprops.amp;
     v.y = vprops.y + Math.sin(vprops.ang)*vprops.amp;
 
     vprops.ang += vprops.speed;
