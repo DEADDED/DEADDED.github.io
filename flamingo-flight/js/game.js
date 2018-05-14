@@ -409,7 +409,7 @@ function loop(){
 		cloudRows[i].rot += rotUpdate;
     
     //removes a cloud row every lap and makes new one to change a position of obstacles
-		if(cloudRows[i].rot >= 6.18)
+		if(cloudRows[i].rot >= 6.28)
 		{
 		  cloudRows[i].removeRow();
 		  cloudRows[i] = new cloudRow();
