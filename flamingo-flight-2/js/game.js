@@ -440,6 +440,10 @@ function loop(){
 		scoreText.innerHTML = "You flew " + score + " seconds.";
 	}
 		
+	if(score % 5 === 0)
+  	{
+  		rotUpdate+=0.00001;
+  	}
   renderer.render(scene, camera);                                               //scene rendering
   
 }
