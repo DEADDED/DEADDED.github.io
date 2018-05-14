@@ -158,12 +158,12 @@ function createLights() {
   shadowLight = new THREE.DirectionalLight(0xffffff, .9);
   shadowLight.position.set(0, 1200, 1200);
   shadowLight.castShadow = true;
-  shadowLight.shadow.camera.left = -400;
-  shadowLight.shadow.camera.right = 400;
-  shadowLight.shadow.camera.top = 400;
-  shadowLight.shadow.camera.bottom = -400;
+  shadowLight.shadow.camera.left = -2400;
+  shadowLight.shadow.camera.right = 2400;
+  shadowLight.shadow.camera.top = 2400;
+  shadowLight.shadow.camera.bottom = -2400;
   shadowLight.shadow.camera.near = 1;
-  shadowLight.shadow.camera.far = 1000;
+  shadowLight.shadow.camera.far = 10000;
   shadowLight.shadow.mapSize.width = 2048;
   shadowLight.shadow.mapSize.height = 2048;
 
