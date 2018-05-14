@@ -264,10 +264,6 @@ Cloud = function(){
 	 m.position.y = Math.random()*10;
 	 m.position.z = Math.random()*10;
    
-   //Random rotation for every block
-	 m.rotation.z = Math.random() * Math.PI * 2;
-	 m.rotation.y = Math.random() * Math.PI * 2;
-   
    //Random scale too
 	 var s = 0.3 + Math.random() * 0.7;
 	 m.scale.set(s,s,s);
