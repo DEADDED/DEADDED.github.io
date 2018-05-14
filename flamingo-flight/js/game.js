@@ -130,7 +130,7 @@ function createScene() {
   camera.position.y = 950;
   camera.position.z = 600;
   
-  renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+  renderer = new THREE.WebGLRenderer();
   renderer.setSize(WIDTH, HEIGHT);
   renderer.shadowMap.enabled = true;
   container = document.getElementById('world');
