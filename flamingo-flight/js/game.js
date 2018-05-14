@@ -53,7 +53,7 @@ function init(event){
   window.addEventListener('devicemotion', handleOrientation);
 
   createScene();
-  createLights();
+  //createLights();
   createGround();
   createSideClouds();
   
