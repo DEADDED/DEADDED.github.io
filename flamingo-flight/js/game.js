@@ -154,7 +154,7 @@ function handleWindowResize() {
 
 function createLights() {
 
-  hemisphereLight = new THREE.HemisphereLight(0x996881,0x996881, .9)
+  hemisphereLight = new THREE.HemisphereLight(0x996881,0xffffff, .9)
   shadowLight = new THREE.DirectionalLight(0xffffff, .9);
   shadowLight.position.set(150, 350, 350);
   shadowLight.castShadow = true;
