@@ -31,7 +31,7 @@ var cloudGlobalPosition = new THREE.Vector3();
 
 var sideClouds;
 var sideCloudsCount = 12;
-angle = 2 * Math.PI / sideCloudsCount;
+var angle = 2 * Math.PI / sideCloudsCount;
 var lCloudsPos = -250;
 var rCloudsPos = - lCloudsPos;
 
