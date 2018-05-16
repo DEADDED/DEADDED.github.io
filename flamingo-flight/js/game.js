@@ -6,6 +6,8 @@ var scene,
 var flamingo;
 var fPos;
 
+updateOrNot = true;
+
 var HEIGHT, WIDTH;
 
 var  hemisphereLight, shadowLight;
