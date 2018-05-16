@@ -151,11 +151,9 @@ function handleWindowResize() {
   camera.updateProjectionMatrix();
 	
 	if(WIDTH < HEIGHT)
-	{container.setAttribute('style','opacity: 0');
-		updateOrNot = false;}
-	else{
-		container.setAttribute('style','opacity: 1');
-		updateOrNot = true;}
+		updateOrNot = false;
+	else
+		updateOrNot = true;
 }
 
 
