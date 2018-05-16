@@ -401,10 +401,10 @@ HEIGHT = window.innerHeight;
   	delta = clock.getDelta();
   mixer.update(delta);                                              //update animation every 'delta' seconds
 
-  ground.moveWaves();
-  ground.mesh.rotation.x += 0.005;
+  //ground.moveWaves();
+  //ground.mesh.rotation.x += 0.005;
 		
-  sideClouds.mesh.rotation.x += 0.007;
+  //sideClouds.mesh.rotation.x += 0.007;
 
   //clouds rotaion and collision detection
 	for(var i = 0; i < cloudRowsCount; i++)
