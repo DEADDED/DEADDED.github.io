@@ -386,8 +386,8 @@ HEIGHT = window.innerHeight;
 	}
  else
  {
-		
-
+  if(clock.running === false)		
+  	clock.start();
   updateFlamingo();                                                 //flamingo behavior	
   if(updateOrNot)
   	delta = clock.getDelta();
