@@ -376,13 +376,17 @@ cloudRow.prototype.addClouds = function(){
 
 //Function for updating each object in a scene
 function loop(){
- if(updateOrNot)
- {
+
+if(WIDTH > HEIGHT)	
   requestAnimationFrame(loop);                                      //update an animation before the next repaint
+	
+else
+	alert("rorate your devise");
+		
 
   updateFlamingo();                                                 //flamingo behavior	
-
-  delta = clock.getDelta();
+  if(updateOrNot)
+  	delta = clock.getDelta();
   mixer.update(delta);                                              //update animation every 'delta' seconds
 
   ground.moveWaves();
@@ -452,8 +456,7 @@ function loop(){
 	  
    	
   renderer.render(scene, camera);                                               //scene rendering
- }
-  
+
 }
 
 //updates the position of flamingo and keeps it in [-100; 100]
