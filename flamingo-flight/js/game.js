@@ -375,11 +375,15 @@ cloudRow.prototype.addClouds = function(){
 //Function for updating each object in a scene
 function loop(){
 
-if(WIDTH > HEIGHT)	
-  requestAnimationFrame(loop);                                      //update an animation before the next repaint
 	
-else
-	alert("rorate your devise");
+  requestAnimationFrame(loop);                                      //update an animation before the next repaint
+	if(WIDTH > HEIGHT)
+	{
+		alert("rorate your devise");
+		return;
+	}
+ else
+ {
 		
 
   updateFlamingo();                                                 //flamingo behavior	
@@ -453,7 +457,8 @@ else
   }
 	  
    	
-  renderer.render(scene, camera);                                               //scene rendering
+  renderer.render(scene, camera);    //scene rendering
+ }
 
 }
 
