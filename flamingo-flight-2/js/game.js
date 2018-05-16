@@ -428,7 +428,7 @@ function loop(){
 					{
 						flamingo.visible = false;
 						clock.stop();
-						alert("You flew " + score + " seconds, but lose... Reload the page to try again.");       //end game message
+						alert("You flew " + score + " seconds, but lost... RELOAD the page TO TRY AGAIN.");       //end game message
 					}	
 				}
 		}
