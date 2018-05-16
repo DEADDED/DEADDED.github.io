@@ -382,7 +382,7 @@ HEIGHT = window.innerHeight;
 	{
 		if(clock.running)
 			clock.stop();
-		alert("lox");
+		alert("lox-lox");
 		return;
 	}
  else
