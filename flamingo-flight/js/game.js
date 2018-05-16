@@ -379,7 +379,7 @@ function loop(){
   requestAnimationFrame(loop);                                      //update an animation before the next repaint
 	if(WIDTH > HEIGHT)
 	{
-		alert("rorate your devise");
+		alert("lox");
 		return;
 	}
  else
