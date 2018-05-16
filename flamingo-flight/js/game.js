@@ -377,7 +377,7 @@ function loop(){
 
 	
   requestAnimationFrame(loop);                                      //update an animation before the next repaint
-	if(WIDTH > HEIGHT)
+	if(WIDTH < HEIGHT)
 	{
 		alert("lox");
 		return;
