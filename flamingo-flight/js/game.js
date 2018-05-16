@@ -56,8 +56,8 @@ function init(event){
 
   createScene();
   createLights();
-  createGround();
-  createSideClouds();
+  //createGround();
+  //createSideClouds();
   
   //first initialising of each cloud row
   for(var i = 0; i < cloudRowsCount; i++){
@@ -86,7 +86,7 @@ function init(event){
   flamingo.position.y = 930;
 	flamingo.position.z = 480;
   flamingo.scale.set(.3,.3,.3);
-	flamingo.rotateY(Math.PI);
+	flamingo.rotateY(Math.PI/4);
 
   scene.add(flamingo);
     
