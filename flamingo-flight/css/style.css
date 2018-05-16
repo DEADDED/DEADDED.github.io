@@ -1,14 +1,11 @@
-div{
+#world{
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-}
-#world{
-    background: linear-gradient(#9290a6,#8d7b92);
+    	background: linear-gradient(#9290a6,#8d7b92);
 }
 #rotate{
-	background: #ff0000;
 	opacity:0;
 }
 body{
