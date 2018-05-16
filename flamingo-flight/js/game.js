@@ -383,7 +383,7 @@ HEIGHT = window.innerHeight;
 		if(clock.running)
 			clock.stop();
 		
-		container.setAttribute('style', 'opacity: 0');
+		//container.setAttribute('style', 'opacity: 0');
 		return;
 	}
  else
@@ -391,7 +391,7 @@ HEIGHT = window.innerHeight;
   if(clock.running == false && flamingo.visible)
   {
   	clock.start();
-	  container.setAttribute('style', 'opacity: 1');
+	  //container.setAttribute('style', 'opacity: 1');
   }
   	
   updateFlamingo();                                                 //flamingo behavior	
