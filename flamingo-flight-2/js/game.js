@@ -7,6 +7,8 @@ var flamingo;
 var fPos;
 
 var HEIGHT, WIDTH;
+var updateOrNot = true;
+
 
 var  hemisphereLight, shadowLight;
 
@@ -372,8 +374,29 @@ cloudRow.prototype.addClouds = function(){
 
 //Function for updating each object in a scene
 function loop(){
+  
+  WIDTH = window.innerWidth;
+  HEIGHT = window.innerHeight;	
 	
   requestAnimationFrame(loop);                                      //update an animation before the next repaint
+	
+	if(WIDTH < HEIGHT)
+	{
+		if(clock.running)
+			clock.stop();
+		
+		container.setAttribute('style', 'opacity: 0');
+		document.getElementById('rotate').setAttribute('style', 'opacity: 1');
+		return;
+	}
+	else
+ {
+  if(clock.running == false && flamingo.visible)
+  {
+  	clock.start();
+	  container.setAttribute('style', 'opacity: 1');
+	  document.getElementById('rotate').setAttribute('style', 'opacity: 0');
+  }
 
   updateFlamingo();                                                 //flamingo behavior	
 
@@ -434,10 +457,13 @@ function loop(){
 	}
   
   //updates the score
-	if(Math.floor(clock.elapsedTime) > score)
+	if(Math.floor(clock.elapsedTime) > score || score > clock.elapsedTime)
 	{
-		score = Math.floor(clock.elapsedTime);
-		scoreText.innerHTML = "You flew " + score + " seconds.";
+		if(Math.floor(clock.elapsedTime) > score)
+			score = Math.floor(clock.elapsedTime);
+		if(score > Math.floor(clock.elapsedTime))
+			score += score.Math.floor(clock.elapsedTime);
+		scoreText.innerHTML = "Flight time is " + score + " seconds.";
 	}
 		
 	if(score % 4 === 0)
@@ -445,6 +471,7 @@ function loop(){
   		rotUpdate+=0.00001;
   	}
   renderer.render(scene, camera);                                               //scene rendering
+ }
   
 }
 
