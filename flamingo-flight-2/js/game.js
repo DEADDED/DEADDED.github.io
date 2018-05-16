@@ -102,7 +102,7 @@ function init(event){
 	
 	scoreText.style.width = 150;
 	scoreText.style.height = 100;
-	scoreText.innerHTML = "You flew 0 seconds";
+	scoreText.innerHTML = "Flight time is 0 seconds";
 	scoreText.style.top = 50 + 'px';
 	scoreText.style.left = 50 + 'px';
 	document.body.appendChild(scoreText);
