@@ -1,20 +1,16 @@
-#world{
+div{
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+}
+#world{
     background: linear-gradient(#9290a6,#8d7b92);
+}
+#rotate{
+	background: #ff0000;
 }
 body{
 	margin: 0;
 }
-@media screen and (orientation:portrait){
-        canvas{
-            opacity: 0;
-        }
-    }
-@media screen and (orientation:landscape){
-        canvas{
-            opacity: 1;
-        }
-    }
+
