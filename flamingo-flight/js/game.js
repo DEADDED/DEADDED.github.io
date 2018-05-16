@@ -6,7 +6,7 @@ var scene,
 var flamingo;
 var fPos;
 
-updateOrNot = true;
+var updateOrNot = true;
 
 var HEIGHT, WIDTH;
 
