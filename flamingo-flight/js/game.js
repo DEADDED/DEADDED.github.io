@@ -149,6 +149,13 @@ function handleWindowResize() {
   renderer.setSize(WIDTH, HEIGHT);
   camera.aspect = WIDTH / HEIGHT;
   camera.updateProjectionMatrix();
+	
+	if(WIDTH < HEIGHT)
+	{container.setAttribute('style','opacity: 0');
+		updateOrNot = false;}
+	else{
+		container.setAttribute('style','opacity: 1');
+		updateOrNot = true;}
 }
 
 
@@ -369,7 +376,8 @@ cloudRow.prototype.addClouds = function(){
 
 //Function for updating each object in a scene
 function loop(){
-	
+ if(updateOrNot)
+ {
   requestAnimationFrame(loop);                                      //update an animation before the next repaint
 
   updateFlamingo();                                                 //flamingo behavior	
@@ -444,6 +452,7 @@ function loop(){
 	  
    	
   renderer.render(scene, camera);                                               //scene rendering
+ }
   
 }
 
