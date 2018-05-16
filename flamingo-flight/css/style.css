@@ -13,3 +13,8 @@ body{
             opacity: 0;
         }
     }
+@media screen and (orientation:landscape){
+        canvas{
+            opacity: 1;
+        }
+    }
