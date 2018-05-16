@@ -384,7 +384,7 @@ HEIGHT = window.innerHeight;
 			clock.stop();
 		
 		container.setAttribute('style', 'opacity: 0');
-		document.getElementById('world').setAttribute('style', 'opacity: 1');
+		document.getElementById('rotate').setAttribute('style', 'opacity: 1');
 		return;
 	}
  else
@@ -393,7 +393,7 @@ HEIGHT = window.innerHeight;
   {
   	clock.start();
 	  container.setAttribute('style', 'opacity: 1');
-	  document.getElementById('world').setAttribute('style', 'opacity: 0');
+	  document.getElementById('rotate').setAttribute('style', 'opacity: 0');
   }
   	
   updateFlamingo();                                                 //flamingo behavior	
