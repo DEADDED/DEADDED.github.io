@@ -381,6 +381,7 @@ HEIGHT = window.innerHeight;
 	if(WIDTH < HEIGHT)
 	{
 		alert("lox");
+		clock.stop();
 		return;
 	}
  else
@@ -445,9 +446,12 @@ HEIGHT = window.innerHeight;
 	}
   
   //updates the score
-	if(Math.floor(clock.elapsedTime) > score)
+	if(Math.floor(clock.elapsedTime) > score || score > clock.elapsedTime)
 	{
-		score = Math.floor(clock.elapsedTime);
+		if(Math.floor(clock.elapsedTime) > score)
+			score = Math.floor(clock.elapsedTime);
+		if(score > Math.floor(clock.elapsedTime))
+			score += score.Math.floor(clock.elapsedTime);
 		scoreText.innerHTML = "Flight time is " + score + " seconds.";
 	}
 
