@@ -374,7 +374,7 @@ cloudRow.prototype.addClouds = function(){
 
 //Function for updating each object in a scene
 function loop(){
-WiDTH = window.innerWidth;
+WIDTH = window.innerWidth;
 HEIGHT = window.innerHeight;
 	
   requestAnimationFrame(loop);                                      //update an animation before the next repaint
