@@ -9,6 +9,7 @@ div{
 }
 #rotate{
 	background: #ff0000;
+	opacity:0;
 }
 body{
 	margin: 0;
