@@ -380,13 +380,14 @@ HEIGHT = window.innerHeight;
   requestAnimationFrame(loop);                                      //update an animation before the next repaint
 	if(WIDTH < HEIGHT)
 	{
+		if(clock.running)
+			clock.stop();
 		alert("lox");
-		clock.stop();
 		return;
 	}
  else
  {
-  if(clock.running === false)		
+  if(clock.running == false)
   	clock.start();
   updateFlamingo();                                                 //flamingo behavior	
   if(updateOrNot)
