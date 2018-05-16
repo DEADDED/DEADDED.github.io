@@ -8,3 +8,8 @@
 body{
 	margin: 0;
 }
+@media screen and (orientation:portrait){
+        canvas{
+            opacity: 0;
+        }
+    }
