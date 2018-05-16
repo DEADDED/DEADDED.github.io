@@ -383,7 +383,8 @@ HEIGHT = window.innerHeight;
 		if(clock.running)
 			clock.stop();
 		
-		//container.setAttribute('style', 'opacity: 0');
+		container.setAttribute('style', 'opacity: 0');
+		document.getElementById('world').setAttribute('style', 'opacity: 1');
 		return;
 	}
  else
@@ -391,7 +392,8 @@ HEIGHT = window.innerHeight;
   if(clock.running == false && flamingo.visible)
   {
   	clock.start();
-	  //container.setAttribute('style', 'opacity: 1');
+	  container.setAttribute('style', 'opacity: 1');
+	  document.getElementById('world').setAttribute('style', 'opacity: 0');
   }
   	
   updateFlamingo();                                                 //flamingo behavior	
