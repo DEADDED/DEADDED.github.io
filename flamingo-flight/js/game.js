@@ -382,13 +382,18 @@ HEIGHT = window.innerHeight;
 	{
 		if(clock.running)
 			clock.stop();
-		alert("lox-lox-lox");
+		
+		container.setAttribute('style', 'opacity: 0');
 		return;
 	}
  else
  {
   if(clock.running == false && flamingo.visible)
+  {
   	clock.start();
+	  container.setAttribute('style', 'opacity: 1');
+  }
+  	
   updateFlamingo();                                                 //flamingo behavior	
   if(updateOrNot)
   	delta = clock.getDelta();
