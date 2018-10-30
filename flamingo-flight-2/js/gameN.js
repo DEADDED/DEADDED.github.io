@@ -1,4 +1,3 @@
-alert("new");
 var isMobile = {
     Android: function() {
         return navigator.userAgent.match(/Android/i);
@@ -21,10 +20,10 @@ var isMobile = {
 };
 
 if (isMobile.any()) {
-alert("mobile");
-document.getElementById("qrCode").setAttribute("opacity","0");
-document.getElementById("rotate").setAttribute("opacity","0");
-document.getElementById("world").setAttribute("opacity","0");
+
+document.getElementById("qrCode").setAttribute("style","opacity: 0");
+//document.getElementById("rotate").setAttribute("opacity","0");
+document.getElementById("world").setAttribute("style","opacity: 1");
 var scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
     renderer, container,  mixer;
