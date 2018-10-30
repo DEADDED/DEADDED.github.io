@@ -47,6 +47,7 @@ var delta = clock.getDelta();
 
 var againButton = document.getElementsByTagName("button")[0];
 //againButton.textContent = "Start again!";
+alert(againButton);
 againButton.setAttribute("disabled", "true");
 againButton.setAttribute("opacity","0");
 
