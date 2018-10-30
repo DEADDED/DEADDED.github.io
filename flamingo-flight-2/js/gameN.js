@@ -299,4 +299,7 @@ function handleOrientation(event){
 //invokes 'init' function when window is loaded
 window.addEventListener('load', init, false);
 }
-
+else{
+    document.getElementById("world").style.opacity = 0;
+    document.getElementById("rotate").style.opacity = 0;
+}
