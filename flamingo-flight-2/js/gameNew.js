@@ -126,13 +126,15 @@ againButton.onclick = function(){
     clock.start();
     loop();*/
   //init();
-  flamingo.visible = true;
+  againButton.style.opacity = 0;
   score = 0;
   scoreText.innerHTML = "Flight time is " + 0 + " seconds.";
   rotUpdate = 0.008;
   clock = new THREE.Clock(false);
   clock.start();
-  againButton.style.opacity = 0;
+  flamingo.visible = true;
+  flamingo.position.x = 0;
+  
 }
 document.body.appendChild(againButton);
 
