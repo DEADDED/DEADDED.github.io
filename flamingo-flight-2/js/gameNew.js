@@ -126,7 +126,7 @@ againButton.onclick = function(){
     clock.start();
     loop();*/
   //init();
-  location.reload();
+  location.reload(true);
 }
 document.body.appendChild(againButton);
 
