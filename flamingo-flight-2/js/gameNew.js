@@ -127,8 +127,10 @@ againButton.onclick = function(){
     loop();*/
   //init();
   flamingo.visible = true;
-  location.reload(true);
-  flamingo.visible = true;
+  score = 0;
+  scoreText.innerHTML = "Flight time is " + score + " seconds.";
+  rotUpdate = 0.008;
+  clock.start();
 }
 document.body.appendChild(againButton);
 
