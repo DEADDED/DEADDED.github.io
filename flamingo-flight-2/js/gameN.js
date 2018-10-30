@@ -1,8 +1,7 @@
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-    alert("QWERTYT");
-var elem = document.querySelector("#qrCode");
-    alert(elem);
-elem.remove();
+
+document.getElementById("world").setAttribute("opacity","0");
+document.getElementById("rotate").setAttribute("opacity","0");
 var scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
     renderer, container,  mixer;
@@ -302,4 +301,8 @@ function handleOrientation(event){
 
 //invokes 'init' function when window is loaded
 window.addEventListener('load', init, false);
+}
+else{
+  var elem = document.querySelector("#qrCode");
+  elem.remove();
 }
