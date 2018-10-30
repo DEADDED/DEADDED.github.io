@@ -45,11 +45,11 @@ var clock = new THREE.Clock(false);
 clock.start();
 var delta = clock.getDelta();
 
-var againButton = document.getElementById("button");
+var againButton/*= document.getElementById("button")*/;
 //againButton.textContent = "Start again!";
-alert(againButton);
-againButton.setAttribute("disabled", "true");
-againButton.setAttribute("opacity","0");
+//alert(againButton);
+//againButton.setAttribute("disabled", "true");
+//againButton.setAttribute("opacity","0");
 
 //This function initialises our scene
 
@@ -66,6 +66,11 @@ createLights();
 createGround();
 createSideClouds();
 
+againButton = document.getElementById("button");
+//againButton.textContent = "Start again!";
+//alert(againButton);
+againButton.setAttribute("disabled", "true");
+againButton.setAttribute("opacity","0");
 //document.getElementsByTagName("canvas")[0].appendChild(againButton);
 
 
