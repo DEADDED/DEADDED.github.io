@@ -326,6 +326,6 @@ window.addEventListener('load', init, false);
 }
 else{
    alert("not mobile"); 
-  var elem = document.getElementById("world);
+  var elem = document.getElementById("world");
   elem.style.opacity = 0;
 }
