@@ -327,7 +327,7 @@ function handleOrientation(event){
 window.addEventListener('load', init, false);
 }
 else{
-    document.getElementById('world').setAttribute('style', 'opacity: 0');
+    //document.getElementById('world').setAttribute('style', 'opacity: 0');
     document.getElementById('rotate').setAttribute('style', 'opacity: 0');
     document.getElementById('qrCode').setAttribute('style', 'opacity: 1');
 }
