@@ -41,7 +41,7 @@ button {
     left: 50%;
     margin-left: -90px;
     position: absolute;
-    disabled;
+    opacity: 0;
 }
 
 button:hover {
