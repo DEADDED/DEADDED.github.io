@@ -120,12 +120,13 @@ againButton.textContent = 'Play again!';
 againButton.style.position = 'absolute';
   
 againButton.onclick = function(){
-    againButton.style.opacity = 0;
+    /*againButton.style.opacity = 0;
     score = 0;
     clock = new THREE.Clock(false);
     clock.start();
-    loop();
+    loop();*/
   //init();
+  location.reload();
 }
 document.body.appendChild(againButton);
 
