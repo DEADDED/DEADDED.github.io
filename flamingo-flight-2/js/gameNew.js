@@ -66,22 +66,6 @@ createLights();
 createGround();
 createSideClouds();
 
-againButton = document.getElementById("button");
-//againButton.textContent = "Start again!";
-//alert(againButton);
-againButton.setAttribute("disabled", "true");
-againButton.setAttribute("opacity","0");
-//document.getElementsByTagName("canvas")[0].appendChild(againButton);
-
-  //button to start the game adain
-againButton.onClick = function(){
-    againButton.setAttribute("opacity","0");
-    againButton.setAttribute("disabled", "true");
-    score = 0;
-    clock = new THREE.Clock(false);
-    clock.start();
-    loop();
-}
 
 //first initialising of each cloud row
 for(var i = 0; i < cloudRowsCount; i++){
@@ -129,6 +113,21 @@ scoreText.innerHTML = "Flight time is 0 seconds";
 scoreText.style.top = 50 + 'px';
 scoreText.style.left = 50 + 'px';
 document.body.appendChild(scoreText);
+
+againButton = document.createElement('button');
+againButton.style.opacity = 0;
+againButton.textContent = 'Play again';
+againButton.setAttribute("disabled", "true");
+  
+againButton.onClick = function(){
+    againButton.setAttribute("opacity","0");
+    againButton.setAttribute("disabled", "true");
+    score = 0;
+    clock = new THREE.Clock(false);
+    clock.start();
+    loop();
+}
+document.body.appendChild(againButton);
 
     
 loop();
