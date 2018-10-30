@@ -73,6 +73,15 @@ againButton.setAttribute("disabled", "true");
 againButton.setAttribute("opacity","0");
 //document.getElementsByTagName("canvas")[0].appendChild(againButton);
 
+  //button to start the game adain
+againButton.onclick = function(){
+    againButton.setAttribute("opacity","0");
+    againButton.setAttribute("disabled", "true");
+    score = 0;
+    clock = new THREE.Clock(false);
+    clock.start();
+    loop();
+}
 
 //first initialising of each cloud row
 for(var i = 0; i < cloudRowsCount; i++){
@@ -510,18 +519,7 @@ function handleOrientation(event){
 fPos = event.accelerationIncludingGravity.y;
 }
 
-//button to start the game adain
 
-
-
-againButton.onclick = function(){
-    againButton.setAttribute("opacity","0");
-    againButton.setAttribute("disabled", "true");
-    score = 0;
-    clock = new THREE.Clock(false);
-    clock.start();
-    loop();
-}
 
 //invokes 'init' function when window is loaded
 window.addEventListener('load', init, false);
