@@ -128,7 +128,7 @@ againButton.onclick = function(){
   //init();
   flamingo.visible = true;
   score = 0;
-  scoreText.innerHTML = "Flight time is " + score + " seconds.";
+  scoreText.innerHTML = "Flight time is " + 0 + " seconds.";
   rotUpdate = 0.008;
   clock.start();
   againButton.style.opacity = 0;
