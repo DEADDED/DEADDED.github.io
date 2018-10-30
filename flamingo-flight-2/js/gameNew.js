@@ -392,12 +392,13 @@ for(var i = 0; i < 3; i++)
 //Function for updating each object in a scene
 function loop(){
 
-if(flamingo){
+
 WIDTH = window.innerWidth;
 HEIGHT = window.innerHeight;	
 
 requestAnimationFrame(loop);                                      //update an animation before the next repaint
-
+  
+if(flamingo){
 if(WIDTH < HEIGHT)
 {
     if(clock.running)
