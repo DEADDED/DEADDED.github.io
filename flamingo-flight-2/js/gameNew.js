@@ -392,6 +392,7 @@ for(var i = 0; i < 3; i++)
 //Function for updating each object in a scene
 function loop(){
 
+if(flamingo){
 WIDTH = window.innerWidth;
 HEIGHT = window.innerHeight;	
 
@@ -418,8 +419,8 @@ if(clock.running == false && flamingo.visible)
 updateFlamingo();                                                 //flamingo behavior	
 
 delta = clock.getDelta();
-if(flamingo)
-  mixer.update(delta);                                              //update animation every 'delta' seconds
+
+mixer.update(delta);                                              //update animation every 'delta' seconds
 
 ground.moveWaves();
 ground.mesh.rotation.x += 0.005;
@@ -491,7 +492,7 @@ if(score % 4 === 0)
   }
 renderer.render(scene, camera);                                               //scene rendering
 }
-
+}
 }
 
 //updates the position of flamingo and keeps it in [-100; 100]
