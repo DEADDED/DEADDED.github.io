@@ -119,7 +119,7 @@ againButton.style.opacity = 0;
 againButton.textContent = 'Play again!';
 againButton.style.position = 'absolute';
   
-againButton.onClick = function(){
+againButton.onclick = function(){
     /*againButton.style.opacity = 0;
     score = 0;
     clock = new THREE.Clock(false);
