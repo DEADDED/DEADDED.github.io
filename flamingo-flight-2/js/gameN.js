@@ -22,8 +22,9 @@ var isMobile = {
 
 if (isMobile.any()) {
 alert("mobile");
-document.getElementById("world").setAttribute("opacity","0");
+document.getElementById("qrCode").setAttribute("opacity","0");
 document.getElementById("rotate").setAttribute("opacity","0");
+document.getElementById("world").setAttribute("opacity","0");
 var scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
     renderer, container,  mixer;
