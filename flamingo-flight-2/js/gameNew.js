@@ -131,6 +131,7 @@ againButton.onclick = function(){
   scoreText.innerHTML = "Flight time is " + score + " seconds.";
   rotUpdate = 0.008;
   clock.start();
+  againButton.style.opacity = 0;
 }
 document.body.appendChild(againButton);
 
