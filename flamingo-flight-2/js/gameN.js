@@ -1,4 +1,4 @@
-if(DeviceMotionEvent){
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
 var scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
     renderer, container,  mixer;
@@ -298,4 +298,5 @@ function handleOrientation(event){
 
 //invokes 'init' function when window is loaded
 window.addEventListener('load', init, false);
+}
 }
