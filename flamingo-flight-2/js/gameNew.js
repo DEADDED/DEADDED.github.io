@@ -74,7 +74,7 @@ againButton.setAttribute("opacity","0");
 //document.getElementsByTagName("canvas")[0].appendChild(againButton);
 
   //button to start the game adain
-againButton.onclick = function(){
+againButton.onClick = function(){
     againButton.setAttribute("opacity","0");
     againButton.setAttribute("disabled", "true");
     score = 0;
