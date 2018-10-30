@@ -115,7 +115,7 @@ scoreText.style.left = 50 + 'px';
 document.body.appendChild(scoreText);
 
 againButton = document.createElement('button');
-againButton.style.opacity = 0;
+againButton.style.opacity = 1;
 againButton.textContent = 'Play again!';
 againButton.style.position = 'absolute';
 againButton.setAttribute("disabled", "true");
