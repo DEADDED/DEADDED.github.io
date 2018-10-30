@@ -27,7 +27,7 @@ p{
 button {
     background-color: white; 
     color: black; 
-    width: 120px;
+    width: 180px;
     height: 80px;
     border: 2px solid #008CBA;
     padding: 16px 32px;
@@ -39,7 +39,7 @@ button {
     top: 50%;
     margin-top: -40px;
     left: 50%;
-    margin-left: -60px;
+    margin-left: -90px;
     position: absolute;
 }
 
