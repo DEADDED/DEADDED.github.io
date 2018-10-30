@@ -1,6 +1,7 @@
 var cloudH = 1046;
 var lCloudsPos = -250;
 var rCloudsPos = - lCloudsPos;
+var sideCloudsCount = 12;
 
 //Declaration of a SideCloud as an object
 //The character (flamingo) is never interacting with them
