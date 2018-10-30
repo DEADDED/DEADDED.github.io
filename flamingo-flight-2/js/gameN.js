@@ -20,6 +20,7 @@ var isMobile = {
 };
 
 if (isMobile.any()) {
+    alert("first");
 
 //document.getElementById('world').setAttribute('style', 'opacity: 1');
 //document.getElementById('rotate').setAttribute('style', 'opacity: 0');
