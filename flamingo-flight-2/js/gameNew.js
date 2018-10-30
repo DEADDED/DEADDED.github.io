@@ -418,7 +418,8 @@ if(clock.running == false && flamingo.visible)
 updateFlamingo();                                                 //flamingo behavior	
 
 delta = clock.getDelta();
-mixer.update(delta);                                              //update animation every 'delta' seconds
+if(flamingo)
+  mixer.update(delta);                                              //update animation every 'delta' seconds
 
 ground.moveWaves();
 ground.mesh.rotation.x += 0.005;
