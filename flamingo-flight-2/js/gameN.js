@@ -155,6 +155,8 @@ function createScene() {
     container = document.getElementById('world');
     container.appendChild(renderer.domElement);
     container.setAttribute('style', 'opacity: 1');
+    document.getElementById('qrCode').setAttribute('style', 'opacity: 0');
+    
 
     window.addEventListener('resize', handleWindowResize, false);
 }
