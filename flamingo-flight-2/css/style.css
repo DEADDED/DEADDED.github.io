@@ -4,6 +4,7 @@
 	height: 100%;
 	overflow: hidden;
     	background: linear-gradient(#9290a6,#8d7b92);
+	opacity: 0;
 }
 #rotate{
 	position: absolute;
