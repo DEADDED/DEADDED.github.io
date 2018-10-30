@@ -21,9 +21,9 @@ var isMobile = {
 
 if (isMobile.any()) {
 
-document.getElementById('world').setAttribute('style', 'opacity: 1');
-document.getElementById('rotate').setAttribute('style', 'opacity: 0');
-document.getElementById('qrCode').setAttribute('style', 'opacity: 0');
+//document.getElementById('world').setAttribute('style', 'opacity: 1');
+//document.getElementById('rotate').setAttribute('style', 'opacity: 0');
+//document.getElementById('qrCode').setAttribute('style', 'opacity: 0');
 //document.getElementById("rotate").setAttribute("opacity","0");
 //document.getElementById("world").setAttribute("style","opacity: 1");
 var scene,
@@ -158,6 +158,7 @@ function createScene() {
     renderer.shadowMap.enabled = true;
     container = document.getElementById('world');
     container.appendChild(renderer.domElement);
+    container.setAttribute('style', 'opacity: 1');
 
     window.addEventListener('resize', handleWindowResize, false);
 }
