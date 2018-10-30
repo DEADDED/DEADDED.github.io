@@ -115,13 +115,12 @@ scoreText.style.left = 50 + 'px';
 document.body.appendChild(scoreText);
 
 againButton = document.createElement('button');
-againButton.style.opacity = 1;
+againButton.style.opacity = 0;
 againButton.textContent = 'Play again!';
 againButton.style.position = 'absolute';
   
 againButton.onClick = function(){
-    againButton.setAttribute("opacity","0");
-    againButton.setAttribute("disabled", "true");
+    againButton.style.opacity = 0;
     score = 0;
     clock = new THREE.Clock(false);
     clock.start();
@@ -451,7 +450,7 @@ for(var i = 0; i < cloudRowsCount; i++)
                     flamingo.visible = false;
                     clock.stop();
                     //alert("You flew " + score + " seconds, but lost... RELOAD the page TO TRY AGAIN.");       //end game message
-                    againButton.style.opacity = 0;
+                    againButton.style.opacity = 1;
                     
                 }	
             }
