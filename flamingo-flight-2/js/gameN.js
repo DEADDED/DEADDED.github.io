@@ -19,6 +19,8 @@ var cloudRowGlobalPosition = new THREE.Vector3();
 var cloudGlobalPosition = new THREE.Vector3();
 var sideClouds;
 var sideCloudsCount = 12;
+var minCloudBlocksCount = 5;
+var maxCLoudBlocksCount = 8;
 var angle = 2 * Math.PI / sideCloudsCount;
 var clock = new THREE.Clock(false);
 clock.start();
