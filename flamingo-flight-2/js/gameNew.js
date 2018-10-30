@@ -126,7 +126,9 @@ againButton.onclick = function(){
     clock.start();
     loop();*/
   //init();
+  flamingo.visible = false;
   location.reload(true);
+  flamingo.visible = false;
 }
 document.body.appendChild(againButton);
 
