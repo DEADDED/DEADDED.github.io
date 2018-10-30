@@ -22,11 +22,7 @@ var isMobile = {
 if (isMobile.any()) {
     alert("first");
 
-//document.getElementById('world').setAttribute('style', 'opacity: 1');
-//document.getElementById('rotate').setAttribute('style', 'opacity: 0');
-//document.getElementById('qrCode').setAttribute('style', 'opacity: 0');
-//document.getElementById("rotate").setAttribute("opacity","0");
-//document.getElementById("world").setAttribute("style","opacity: 1");
+
 var scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
     renderer, container,  mixer;
@@ -333,7 +329,5 @@ function handleOrientation(event){
 window.addEventListener('load', init, false);
 }
 else{
-    //document.getElementById('world').setAttribute('style', 'opacity: 0');
-    //document.getElementById('rotate').setAttribute('style', 'opacity: 0');
-    //document.getElementById('qrCode').setAttribute('style', 'opacity: 1');
+
 }
