@@ -495,8 +495,9 @@ renderer.render(scene, camera);                                               //
 
 //updates the position of flamingo and keeps it in [-100; 100]
 function updateFlamingo(){
-    
-flamingo.position.x += fPos;
+
+if(flamingo)
+  flamingo.position.x += fPos;
 
 if(flamingo.position.x > 100)
     flamingo.position.x = 100;
