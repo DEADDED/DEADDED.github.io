@@ -1,3 +1,4 @@
+if(DeviceMotionEvent){
 var scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
     renderer, container,  mixer;
@@ -297,3 +298,4 @@ function handleOrientation(event){
 
 //invokes 'init' function when window is loaded
 window.addEventListener('load', init, false);
+}
