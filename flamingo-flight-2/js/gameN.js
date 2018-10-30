@@ -1,3 +1,4 @@
+alert("new");
 var isMobile = {
     Android: function() {
         return navigator.userAgent.match(/Android/i);
@@ -20,7 +21,7 @@ var isMobile = {
 };
 
 if (isMobile.any()) {
-
+alert("mobile");
 document.getElementById("world").setAttribute("opacity","0");
 document.getElementById("rotate").setAttribute("opacity","0");
 var scene,
@@ -324,6 +325,7 @@ function handleOrientation(event){
 window.addEventListener('load', init, false);
 }
 else{
+   alert("not mobile"); 
   var elem = document.querySelector("#qrCode");
   elem.remove();
 }
