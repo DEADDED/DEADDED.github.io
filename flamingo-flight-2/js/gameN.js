@@ -159,6 +159,8 @@ function createScene() {
     container = document.getElementById('world');
     container.appendChild(renderer.domElement);
     container.setAttribute('style', 'opacity: 1');
+    alert("X");
+    alert(container.getAttribute("opacity"));
 
     window.addEventListener('resize', handleWindowResize, false);
 }
