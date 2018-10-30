@@ -299,4 +299,4 @@ function handleOrientation(event){
 //invokes 'init' function when window is loaded
 window.addEventListener('load', init, false);
 }
-}
+
