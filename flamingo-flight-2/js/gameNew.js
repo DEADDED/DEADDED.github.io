@@ -45,7 +45,7 @@ var clock = new THREE.Clock(false);
 clock.start();
 var delta = clock.getDelta();
 
-var againButton = document.getElementsByTagName("button")[0];
+var againButton = document.getElementById("button");
 //againButton.textContent = "Start again!";
 alert(againButton);
 againButton.setAttribute("disabled", "true");
