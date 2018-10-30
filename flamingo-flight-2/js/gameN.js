@@ -220,6 +220,7 @@ function loop(){
             
             container.setAttribute('style', 'opacity: 0');
             document.getElementById('rotate').setAttribute('style', 'opacity: 1');
+            document.getElementById('qrCode').setAttribute('style', 'opacity: 0');
             return;
         }
         else{
@@ -227,6 +228,7 @@ function loop(){
                 clock.start();
                 container.setAttribute('style', 'opacity: 1');
                 document.getElementById('rotate').setAttribute('style', 'opacity: 0');
+                document.getElementById('qrCode').setAttribute('style', 'opacity: 0');
             }
 
             updateFlamingo();                                                 //flamingo behavior	
