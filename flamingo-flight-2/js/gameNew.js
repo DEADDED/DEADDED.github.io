@@ -45,18 +45,10 @@ var clock = new THREE.Clock(false);
 clock.start();
 var delta = clock.getDelta();
 
-var againButton/*= document.getElementById("button")*/;
-//againButton.textContent = "Start again!";
-//alert(againButton);
-//againButton.setAttribute("disabled", "true");
-//againButton.setAttribute("opacity","0");
+var againButton;
 
 //This function initialises our scene
-
 function init(event){
-
-//window.addEventListener('mousemove', handleMouseMove);
-
 
 //event handler for controlling a character using an accelerometer
 window.addEventListener('devicemotion', handleOrientation);
@@ -120,12 +112,6 @@ againButton.textContent = 'Play again!';
 againButton.style.position = 'absolute';
   
 againButton.onclick = function(){
-    /*againButton.style.opacity = 0;
-    score = 0;
-    clock = new THREE.Clock(false);
-    clock.start();
-    loop();*/
-  //init();
   againButton.style.opacity = 0;
   score = 0;
   scoreText.innerHTML = "Flight time is " + 0 + " seconds.";
@@ -459,7 +445,6 @@ for(var i = 0; i < cloudRowsCount; i++)
                 {
                     flamingo.visible = false;
                     clock.stop();
-                    //alert("You flew " + score + " seconds, but lost... RELOAD the page TO TRY AGAIN.");       //end game message
                     againButton.style.opacity = 1;
                     
                 }	
@@ -525,8 +510,6 @@ else if(flamingo.position.x < -100)
 function handleOrientation(event){
 fPos = event.accelerationIncludingGravity.y;
 }
-
-
 
 //invokes 'init' function when window is loaded
 window.addEventListener('load', init, false);
